@@ -10,6 +10,7 @@ import CustomButton from '../components/Buttons/button';
 import { FetchProducts } from '../redux/actions/homeAction';
 import About from '../template/about/about';
 import CarouselWithTab from '../container/tab_carousel/tab_carousel';
+import DashBoard from '../container/dashboard/dashboard'
 
 const DataBrand = [
   {
@@ -40,6 +41,45 @@ const DataBrand = [
     urlKey: 'brand/sneakers/adidas',
   },
 ];
+
+const DataDashBoard = [
+  {
+    id: 1,
+    name: 'Wander',
+    completion: 89,
+    total_transaction: 35,
+    location: '34 Dinh Cong, Hanoi',
+    imgUrl: 
+    'https://cdn0.iconfinder.com/data/icons/profession-and-occupation-icons/110/avatar_occupation_profile_cook_kitchener_flunkey_food-512.png',
+  },
+  {
+    id: 2,
+    name: 'Watson',
+    completion: 80,
+    total_transaction: 5,
+    location: '84 Hoan Kien, Hanoi',
+    imgUrl: 
+    'https://cdn.dribbble.com/users/25200/screenshots/1759526/gfpp-logo-dribble.png?compress=1&resize=400x300',
+  },
+  {
+    id: 3,
+    name: 'Lig',
+    completion: 80,
+    total_transaction: 5,
+    location: '84 Hoan Kien, Hanoi',
+    imgUrl: 
+    'https://cdn.dribbble.com/users/25200/screenshots/1759526/gfpp-logo-dribble.png?compress=1&resize=400x300',
+  },
+  {
+    id: 4,
+    name: 'AW',
+    completion: 80,
+    total_transaction: 5,
+    location: '84 Hoan Kien, Hanoi',
+    imgUrl: 
+    'https://cdn.dribbble.com/users/25200/screenshots/1759526/gfpp-logo-dribble.png?compress=1&resize=400x300',
+  }
+]
 
 function Home()
 {
@@ -96,12 +136,7 @@ function Home()
       {/* <PosterHome /> */}
       <About />
       <Container>
-        <CardContainer title="Latest Buy" data={homeState.homeData.latestBuy} />
-        <CardContainer
-          title="Latest Product"
-          data={homeState.homeData.latestProduct}
-        />
-        <br />
+        <DashBoard data={DataDashBoard}/>
       </Container>
     </React.Fragment>
   );

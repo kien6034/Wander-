@@ -1,0 +1,72 @@
+.root{
+    margin: 20px 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.image{
+    height: 5rem;
+    width: 5rem;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.content{
+    margin-left: 10px;
+}
+
+.image img{
+    height: 100%;
+}
+
+
+.location{
+    font-size: 0.8rem;
+    display: flex;
+    color: rgb(85, 84, 84);
+}
+
+.location img{
+    height: 0.8rem;
+    margin-right: 5px;
+}
+
+.location .value{
+    color: red;
+}
+
+.name{
+    display: flex;
+    margin-bottom: 0.4rem;
+    align-items: center;
+}
+
+.name div{
+    background-color: red;
+    width: 2rem;
+    height: 1.5rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-weight: 600;
+}
+
+.name span{
+    margin-left: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+
+.infos{
+    margin-top: 10px;
+    font-size: 0.7rem;
+    color: #222;
+}

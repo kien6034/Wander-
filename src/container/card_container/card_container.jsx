@@ -5,7 +5,7 @@ import { Grid } from '@material-ui/core';
 import PropTypes from 'prop-types';
 import HelpIcon from '@material-ui/icons/Help';
 import { nanoid } from 'nanoid';
-import CustomCard from '../card/card';
+import CustomCard from '../card/fcard';
 import CustomTypography from '../../components/Typography/typography';
 
 const fakeData = [
@@ -91,7 +91,7 @@ const CardContainer = ({
         // Product
         ? data.map((doc) => (
             // eslint-disable-next-line no-underscore-dangle
-            <Grid key={doc._id} item xs={6} sm={3}>
+            <Grid key={doc._id} item xs={6} lg={3} md={6}>
               <CustomCard data={doc} type={type} />
             </Grid>
           ))

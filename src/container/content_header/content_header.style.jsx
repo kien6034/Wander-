@@ -53,6 +53,7 @@ const contentHeaderStyle = makeStyles({
     // fontSize: '3.5rem',
     "&:hover": {
       backgroundColor: '#044400',
+      zIndex: '10',
     },
   },
 

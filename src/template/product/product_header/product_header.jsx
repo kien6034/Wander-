@@ -101,7 +101,7 @@ const ProductHeader = ({
           </CustomTypography>
           <br />
           <Grid container spacing={3}>
-            <Grid item sm={3}>
+            <Grid item sm={2}>
               <Avatar
                 alt='Demo Avatar'
                 src='https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg'

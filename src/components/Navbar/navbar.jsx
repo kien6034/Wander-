@@ -36,6 +36,10 @@ const Navbar = (props) =>
       path: '/chatbox',
     },
     {
+      title: 'Create Product',
+      path: '/createProduct',
+    },
+    {
       title: '404',
       path: '/404',
     },

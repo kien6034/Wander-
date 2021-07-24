@@ -26,7 +26,12 @@ const sample_product = {
       city: "Hà Nội",
       nation: "Việt Nam"
     },
-    imageurl: "https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg",
+    imageurl:  [
+      "https://upload.wikimedia.org/wikipedia/commons/9/9d/Kiwi_%28Actinidia_chinensis%29_1_Luc_Viatour_edit.jpg",
+      "https://lh3.googleusercontent.com/proxy/6e8JiwJUNPuT7Binq4pOZc4o5CInN5d-n513wevm_OtIkDgjTYitdrSEmw7baJOAxLavHruleBl8RC3V7CLTJTD-o8tBnJuJdtyfPiDILm-jEOYKSu0",
+      "http://suckhoedoisong.vn/Images/thanhloan/2016/06/14/6-tac-dung-bat-ngo-cua-kiwi.jpg",
+      "https://icdn.dantri.com.vn/FaA3gEccccccccccccos/Image/2013/10/kiwi-81013-94dfa.jpg",
+    ],
     donator: { name: "Ngxba", id: "abc", urlKey: "/"},
     detail: [
       {

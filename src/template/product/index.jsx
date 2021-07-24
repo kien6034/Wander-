@@ -12,13 +12,244 @@ import { FetchProduct } from '../../redux/actions/productActions';
 import FetchRelatedProducts from '../../redux/actions/relatedProducAction';
 import Shadow from '../../components/Shadow/shadow';
 
+const sample_product = {
+  productData: {
+    tags: ["foot", "not food", "dry food", "dairy food", "buffet", "fruit", "vegetable", "drinks"],
+    _id: "6073c30784658c55e8ab46b7",
+    productName: "Cereals",
+    quantity: {
+      init: 10,
+      remain: 9
+    },
+    location: {
+      district: "Ba đình",
+      city: "Hà Nội",
+      nation: "Việt Nam"
+    },
+    imageurl:  [
+      "https://upload.wikimedia.org/wikipedia/commons/9/9d/Kiwi_%28Actinidia_chinensis%29_1_Luc_Viatour_edit.jpg",
+      "https://lh3.googleusercontent.com/proxy/6e8JiwJUNPuT7Binq4pOZc4o5CInN5d-n513wevm_OtIkDgjTYitdrSEmw7baJOAxLavHruleBl8RC3V7CLTJTD-o8tBnJuJdtyfPiDILm-jEOYKSu0",
+      "http://suckhoedoisong.vn/Images/thanhloan/2016/06/14/6-tac-dung-bat-ngo-cua-kiwi.jpg",
+      "https://icdn.dantri.com.vn/FaA3gEccccccccccccos/Image/2013/10/kiwi-81013-94dfa.jpg",
+    ],
+    donator: { name: "Ngxba", id: "abc", urlKey: "/"},
+    detail: [
+      {
+        _id: "a",
+        name: "NSX",
+        value: "2021-07-23",
+      },
+      {
+        _id: "hsd",
+        name: "HSD",
+        value: "2021-07-24",
+      },
+      {
+        _id: "c",
+        name: "Company",
+        value: "Pepsi",
+      },
+    ],
+    description: "This is a wonderful food, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    sizeQuantity: [{ _id: "random", size: "0$", quantity: 0 }, { _id: "random", size: "5$", quantity: 0 }, { _id: "random", size: "10$", quantity: 2 }, { _id: "random", size: "20$", quantity: 2 }],
+    dateUpdated: "20210722",
+  }
+}
+
+let sample_relatedProducts = { productsData: [{
+  tags: ["foot", "not food", "dry food", "dairy food", "buffet", "fruit", "vegetable", "drinks"],
+  _id: "6073c30784658c55e8ab46b7",
+  productName: "Cereals",
+  quantity: {
+    init: 10,
+    remain: 9
+  },
+  location: {
+    district: "Ba đình",
+    city: "Hà Nội",
+    nation: "Việt Nam"
+  },
+  imageurl: "https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg",
+  donator: { name: "Ngxba", id: "abc", urlKey: "/"},
+  detail: [
+    {
+      _id: "a",
+      name: "NSX",
+      value: "2021-07-23",
+    },
+    {
+      _id: "hsd",
+      name: "HSD",
+      value: "2021-07-24",
+    },
+    {
+      _id: "c",
+      name: "Company",
+      value: "Pepsi",
+    },
+  ],
+  description: "This is a wonderful food, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  sizeQuantity: [{ _id: "random", size: "0$", quantity: 0 }, { _id: "random", size: "5$", quantity: 0 }, { _id: "random", size: "10$", quantity: 2 }, { _id: "random", size: "20$", quantity: 2 }],
+  dateUpdated: "20210722",
+}, {
+  tags: ["foot", "not food", "dry food", "dairy food", "buffet", "fruit", "vegetable", "drinks"],
+  _id: "6073c30784658c55e8ab46b7",
+  productName: "Cereals",
+  quantity: {
+    init: 10,
+    remain: 9
+  },
+  location: {
+    district: "Ba đình",
+    city: "Hà Nội",
+    nation: "Việt Nam"
+  },
+  imageurl: "https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg",
+  donator: { name: "Ngxba", id: "abc", urlKey: "/"},
+  detail: [
+    {
+      _id: "a",
+      name: "NSX",
+      value: "2021-07-23",
+    },
+    {
+      _id: "hsd",
+      name: "HSD",
+      value: "2021-07-24",
+    },
+    {
+      _id: "c",
+      name: "Company",
+      value: "Pepsi",
+    },
+  ],
+  description: "This is a wonderful food, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  sizeQuantity: [{ _id: "random", size: "0$", quantity: 0 }, { _id: "random", size: "5$", quantity: 0 }, { _id: "random", size: "10$", quantity: 2 }, { _id: "random", size: "20$", quantity: 2 }],
+  dateUpdated: "20210722",
+}, {
+  tags: ["foot", "not food", "dry food", "dairy food", "buffet", "fruit", "vegetable", "drinks"],
+  _id: "6073c30784658c55e8ab46b7",
+  productName: "Cereals",
+  quantity: {
+    init: 10,
+    remain: 9
+  },
+  location: {
+    district: "Ba đình",
+    city: "Hà Nội",
+    nation: "Việt Nam"
+  },
+  imageurl: "https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg",
+  donator: { name: "Ngxba", id: "abc", urlKey: "/"},
+  detail: [
+    {
+      _id: "a",
+      name: "NSX",
+      value: "2021-07-23",
+    },
+    {
+      _id: "hsd",
+      name: "HSD",
+      value: "2021-07-24",
+    },
+    {
+      _id: "c",
+      name: "Company",
+      value: "Pepsi",
+    },
+  ],
+  description: "This is a wonderful food, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  sizeQuantity: [{ _id: "random", size: "0$", quantity: 0 }, { _id: "random", size: "5$", quantity: 0 }, { _id: "random", size: "10$", quantity: 2 }, { _id: "random", size: "20$", quantity: 2 }],
+  dateUpdated: "20210722",
+}, {
+  tags: ["foot", "not food", "dry food", "dairy food", "buffet", "fruit", "vegetable", "drinks"],
+  _id: "6073c30784658c55e8ab46b7",
+  productName: "Cereals",
+  quantity: {
+    init: 10,
+    remain: 9
+  },
+  location: {
+    district: "Ba đình",
+    city: "Hà Nội",
+    nation: "Việt Nam"
+  },
+  imageurl: "https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg",
+  donator: { name: "Ngxba", id: "abc", urlKey: "/"},
+  detail: [
+    {
+      _id: "a",
+      name: "NSX",
+      value: "2021-07-23",
+    },
+    {
+      _id: "hsd",
+      name: "HSD",
+      value: "2021-07-24",
+    },
+    {
+      _id: "c",
+      name: "Company",
+      value: "Pepsi",
+    },
+  ],
+  description: "This is a wonderful food, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  sizeQuantity: [{ _id: "random", size: "0$", quantity: 0 }, { _id: "random", size: "5$", quantity: 0 }, { _id: "random", size: "10$", quantity: 2 }, { _id: "random", size: "20$", quantity: 2 }],
+  dateUpdated: "20210722",
+}, {
+  tags: ["foot", "not food", "dry food", "dairy food", "buffet", "fruit", "vegetable", "drinks"],
+  _id: "6073c30784658c55e8ab46b7",
+  productName: "Cereals",
+  quantity: {
+    init: 10,
+    remain: 9
+  },
+  location: {
+    district: "Ba đình",
+    city: "Hà Nội",
+    nation: "Việt Nam"
+  },
+  imageurl: "https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg",
+  donator: { name: "Ngxba", id: "abc", urlKey: "/"},
+  detail: [
+    {
+      _id: "a",
+      name: "NSX",
+      value: "2021-07-23",
+    },
+    {
+      _id: "hsd",
+      name: "HSD",
+      value: "2021-07-24",
+    },
+    {
+      _id: "c",
+      name: "Company",
+      value: "Pepsi",
+    },
+  ],
+  description: "This is a wonderful food, Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+  sizeQuantity: [{ _id: "random", size: "0$", quantity: 0 }, { _id: "random", size: "5$", quantity: 0 }, { _id: "random", size: "10$", quantity: 2 }, { _id: "random", size: "20$", quantity: 2 }],
+  dateUpdated: "20210722",
+}]}
+
 const Product = ({ match }) =>
 {
   const classes = productStyle();
   const { params } = match;
 
-  const productState = useSelector((state) => state.productState);
-  const relatedProductsState = useSelector((state) => state.relatedProductsState);
+  const productState = useSelector((state) => {
+    // if (state.productState.error == "")
+    //   return state.productState.productData
+    // else 
+      return sample_product
+  });
+  const relatedProductsState = useSelector((state) => {
+    // if (state.productsState.error == "")
+    //   return state.relatedProductsState
+    // else 
+      return sample_relatedProducts
+    });
 
   const dispatch = useDispatch();
 
@@ -46,7 +277,7 @@ const Product = ({ match }) =>
 
   const linkRoutes = textRoutes.map((text, index) =>
   {
-    let href = "/brand";
+    let href = "/marketplace";
     for (let i = 0; i <= index; i += 1)
     {
       href += `/${textRoutes[i]}`;
@@ -87,9 +318,9 @@ const Product = ({ match }) =>
         <ProductHeader
           routes={linkRoutes}
           productName={productState.productData.productName}
-          ticker={productState.productData.tickerSymbol}
+          donator={productState.productData.donator}
           sizeQuantity={productState.productData.sizeQuantity}
-          price={productState.productData.price}
+          quantity={productState.productData.quantity}
           urlKey={params.urlKey}
         />
         {/* Product media */}
@@ -101,6 +332,7 @@ const Product = ({ match }) =>
         <ProductInfo
           detail={productState.productData.detail}
           description={productState.productData.description}
+          location= {location}
         />
         {/* Related products */}
         {relatedProductsState.loading ? (
@@ -110,7 +342,6 @@ const Product = ({ match }) =>
             relatedProductList={relatedProductsState.productsData}
           />
         )}
-        )
       </Container>
     </div>
   );

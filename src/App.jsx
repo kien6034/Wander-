@@ -10,6 +10,7 @@ import AppRoute from './utils/AppRoute';
 import Home from './pages/home';
 import About from './pages/about';
 import ChatBox from './pages/new/chatbox/chatbox2';
+import Provider from './pages/provider/provider';
 import LoginRegisterForm from './container/authen/login_register_form';
 import Brand from './template/brand/brand';
 import Product from './template/product';
@@ -59,6 +60,12 @@ function App()
             />
             <AppRoute
               exact
+              path="/provider"
+              component={Provider}
+              layout={LayoutDefault}
+            />
+            <AppRoute
+              exact
               path="/login"
               component={LoginRegisterForm}
               layout={LayoutDefault}
@@ -93,18 +100,19 @@ function App()
             />
             <AppRoute
               exact
-              path="/brand/:category/:tag?/:tag2?/:tag3?/:tag4?/:tag5?"
-              component={Brand}
+              path="/chatbox"
+              component={ChatBox}
               layout={LayoutDefault}
+              isMainPage={false}
             />
             <AppRoute
               exact
-              path="/chatbox/"
-              component={ChatBox}
+              path="/marketplace/:category/:tag?/:tag2?/:tag3?/:tag4?/:tag5?"
+              component={Brand}
               layout={LayoutDefault}
             />
-            <Redirect exact from="/brand" to="/brand/sneakers" />
-            <Redirect exact from="/product" to="/brand/sneakers" />
+            <Redirect exact from="/marketplace" to="/marketplace/sneakers" />
+            <Redirect exact from="/product" to="/marketplace/all" />
             <Redirect from="*" to="/404" />
           </Switch>
         </BrowserRouter>

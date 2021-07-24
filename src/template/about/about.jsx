@@ -14,7 +14,7 @@ function AboutGrid()
           <img
             className={classes.image}
             alt="shoe"
-            src="https://stockx.com/about/wp-content/uploads/2020/11/shoe.svg"
+            src="https://image.flaticon.com/icons/png/128/498/498280.png"
           />
           <h3>100% Verified Authentic</h3>
           <div>
@@ -41,9 +41,9 @@ function AboutGrid()
           <img
             className={classes.image}
             alt="transparent"
-            src="https://stockx.com/about/wp-content/uploads/2020/11/chart-up.svg"
+            src="https://image.flaticon.com/icons/png/128/2618/2618479.png"
           />
-          <h3>Transparent Pricing</h3>
+          <h3>Transparent Donation</h3>
           <div>
             <p>
               <span>
@@ -58,7 +58,7 @@ function AboutGrid()
           <img
             className={classes.image}
             alt="global"
-            src="https://stockx.com/about/wp-content/uploads/2020/11/globe.svg"
+            src="https://image.flaticon.com/icons/png/128/814/814587.png"
           />
           <h3>Global Access</h3>
           <div>
@@ -80,7 +80,7 @@ function AboutGrid()
           <img
             className={classes.image}
             alt="No BS"
-            src="https://stockx.com/about/wp-content/uploads/2020/11/user.svg"
+            src="https://image.flaticon.com/icons/png/128/1128/1128191.png"
           />
           <h3>No BS</h3>
           <div>
@@ -98,7 +98,7 @@ function AboutGrid()
           <img
             className={classes.image}
             alt="Secure"
-            src="https://stockx.com/about/wp-content/uploads/2020/11/shield.svg"
+            src="https://image.flaticon.com/icons/png/128/508/508281.png"
           />
           <h3>Secure</h3>
           <div>
@@ -110,17 +110,12 @@ function AboutGrid()
               </span>
             </p>
           </div>
-          <img
-            className={classes.secure}
-            alt="security logo"
-            src="https://stockx.com/about/wp-content/uploads/2020/11/security-logos.png"
-          />
         </Grid>
         <Grid item md={4} xs={6} className={classes.grid}>
           <img
             className={classes.image}
             alt="shoe"
-            src="https://stockx.com/about/wp-content/uploads/2020/11/customer-service.svg"
+            src="https://image.flaticon.com/icons/png/128/3094/3094824.png"
           />
           <h3>Here For You</h3>
           <div>

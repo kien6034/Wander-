@@ -10,36 +10,76 @@ import CustomButton from '../components/Buttons/button';
 import { FetchProducts } from '../redux/actions/homeAction';
 import About from '../template/about/about';
 import CarouselWithTab from '../container/tab_carousel/tab_carousel';
+import DashBoard from '../container/dashboard/dashboard'
 
 const DataBrand = [
   {
     id: nanoid(),
-    productName: 'JORDAN',
+    productName: 'Organic Food',
+    imageurl:
+      'https://static.euronews.com/articles/stories/05/46/11/34/1440x810_cmsv2_f54fdc9f-16b4-5eda-be02-37d88540662c-5461134.jpg',
+    imgBrandSrc:
+      '',
+    urlKey: 'marketplace/OrganicFood',
+  },
+  {
+    id: nanoid(),
+    productName: 'Dry Food',
     imageurl:
       'https://cdn.huongnghiepaau.com/wp-content/uploads/2017/12/851a3e9c866bd8216df247b9d7bec9b3.jpg',
     imgBrandSrc:
-      'https://stockx-assets.imgix.net/png/brand-tiles/img-jordan.png?auto=compress,format',
-    urlKey: 'brand/sneakers/jordan',
+      '',
+    urlKey: 'marketplace/DryFood',
   },
   {
     id: nanoid(),
-    productName: 'NIKE',
+    productName: 'Not Food',
     imageurl:
-      'https://stockx-assets.imgix.net/png/brand-tiles/sneakers/homepage-tiles-nike-v2.png?auto=compress,format',
+      'https://www.escoffieronline.com/wp-content/uploads/2013/04/iStock-995038782-small.jpg',
     imgBrandSrc:
-      'https://stockx-assets.imgix.net/png/brand-tiles/img-nike.png?auto=compress,format',
-    urlKey: 'brand/sneakers/nike',
-  },
-  {
-    id: nanoid(),
-    productName: 'ADIDAS',
-    imageurl:
-      'https://stockx-assets.imgix.net/png/brand-tiles/sneakers/homepage-tiles-adidas.png?auto=compress,format',
-    imgBrandSrc:
-      'https://stockx-assets.imgix.net/png/brand-tiles/img-adidas.png?auto=compress,format',
-    urlKey: 'brand/sneakers/adidas',
+      '',
+    urlKey: 'marketplace/NotFood',
   },
 ];
+
+const DataDashBoard = [
+  {
+    id: 1,
+    name: 'Wander',
+    completion: 89,
+    total_transaction: 35,
+    location: '34 Dinh Cong, Hanoi',
+    imgUrl: 
+    'https://cdn0.iconfinder.com/data/icons/profession-and-occupation-icons/110/avatar_occupation_profile_cook_kitchener_flunkey_food-512.png',
+  },
+  {
+    id: 2,
+    name: 'Watson',
+    completion: 80,
+    total_transaction: 5,
+    location: '84 Hoan Kien, Hanoi',
+    imgUrl: 
+    'https://cdn.dribbble.com/users/25200/screenshots/1759526/gfpp-logo-dribble.png?compress=1&resize=400x300',
+  },
+  {
+    id: 3,
+    name: 'Lig',
+    completion: 80,
+    total_transaction: 5,
+    location: '84 Hoan Kien, Hanoi',
+    imgUrl: 
+    'https://cdn.dribbble.com/users/25200/screenshots/1759526/gfpp-logo-dribble.png?compress=1&resize=400x300',
+  },
+  {
+    id: 4,
+    name: 'AW',
+    completion: 80,
+    total_transaction: 5,
+    location: '84 Hoan Kien, Hanoi',
+    imgUrl: 
+    'https://cdn.dribbble.com/users/25200/screenshots/1759526/gfpp-logo-dribble.png?compress=1&resize=400x300',
+  }
+]
 
 function Home()
 {
@@ -72,13 +112,13 @@ function Home()
       <ContentHeader />
       <CarouselWithTab />
       <Container maxWidth="md">
-        <CardContainer type="brand" title="Popular Brands" data={DataBrand} />
+        <CardContainer type="brand" title="Category" data={DataBrand} />
         <CardContainer
-          title="Most Popular"
+          title="Latest Product"
           data={homeState.homeData.mostPopular}
         />
         <CardContainer
-          title="What's trending"
+          title="From our top provider"
           data={homeState.homeData.trending}
         />
         <div style={{
@@ -86,9 +126,9 @@ function Home()
           margin: '20px 0',
         }}
         >
-          <Link to="/brand/sneakers" style={{ textDecoration: 'none' }}>
+          <Link to="/marketplace" style={{ textDecoration: 'none' }}>
             <CustomButton backgroundColor="primary" buttonSize="btn--large">
-              Browse Thousands of Sneakers on our Live Marketplace
+              Browse Thousands of Avaible on our Sharing Marketplace
             </CustomButton>
           </Link>
         </div>
@@ -96,12 +136,7 @@ function Home()
       {/* <PosterHome /> */}
       <About />
       <Container>
-        <CardContainer title="Latest Buy" data={homeState.homeData.latestBuy} />
-        <CardContainer
-          title="Latest Product"
-          data={homeState.homeData.latestProduct}
-        />
-        <br />
+        <DashBoard data={DataDashBoard}/>
       </Container>
     </React.Fragment>
   );

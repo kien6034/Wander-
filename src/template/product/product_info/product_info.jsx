@@ -7,6 +7,7 @@ import CustomTypography from '../../../components/Typography/typography';
 const ProductInfo = ({
   detail,
   description,
+  location
 }) =>
 {
   const classes = productInfoStyle();

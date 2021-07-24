@@ -25,10 +25,11 @@ const brandStyle = makeStyles(() => ({
     justifyContent: "center",
     flexDirection: "column",
     backgroundImage:
-      "url(//stockx-assets.imgix.net/Core/browse-header-streetwear.jpg?auto=compress,format)",
+      "url(https://images.unsplash.com/photo-1498579809087-ef1e558fd1da?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80?auto=compress,format)",
     height: "270px",
     width: "100%",
     paddingLeft: "3rem",
+    backgroundSize: "cover"
   },
 
   selectEmpty: {

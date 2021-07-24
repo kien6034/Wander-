@@ -8,14 +8,21 @@ const cardStyle = makeStyles({
     minWidth: (props) => (props.minWidth ? props.minWidth : "none"),
     marginRight: 20,
     position: 'relative',
-    maxWidth: '250px'
+    "&:hover": {
+      position: 'relative',
+      top: '-1px',
+      left: '1px',
+    },
   },
   media: {
-    paddingTop: '56.25%',
+    paddingTop: '56.5%',
+    backgroundSize: 'cover',
   },
   cardContent: {
     backgroundColor: '#fafafa',
     padding: '0.5rem',
+    position: 'relative',
+    width: '100%',
   },
   smallImg: {
     width: "50px",
@@ -24,6 +31,12 @@ const cardStyle = makeStyles({
     position: "absolute",
     left: "80%",
     top: "0px",
+  },
+  'main-info': {
+    display: 'flex',
+    alignItems: 'center',
+    fontSize: '0.5rem',
+    justifyContent: 'space-between',
   },
 });
 

@@ -8,10 +8,12 @@ function SimpleBreadcrumbs({ data })
   const routeData = data;
 
   // Add home to first
+  if (routeData[0].text != 'home') {
   routeData.unshift({
     href: '/',
     text: 'home',
   });
+}
 
   return (
     <Breadcrumbs aria-label="breadcrumb">

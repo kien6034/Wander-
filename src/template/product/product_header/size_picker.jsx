@@ -29,9 +29,9 @@ const SizePicker = ({
             }
           }
         >
-          Select A EU. Men&apos;s Size
+          Select A Donation Amount
         </CustomTypography>
-
+{/* 
         <CustomTypography
           onClick={sizeChartButtonOnClick}
           txtType="text--bold"
@@ -46,7 +46,7 @@ const SizePicker = ({
           }
         >
           Size Chart
-        </CustomTypography>
+        </CustomTypography> */}
 
       </div>
 
@@ -65,12 +65,13 @@ const SizePicker = ({
         {
           sizeQuantity.map((element) =>
           {
+            console.log(sizeQuantity)
             const { _id, size, quantity } = element;
             const clicked = size === currentSize;
 
             return (
               // Only render size that has quantity > 0
-              (quantity > 0) && (
+              (quantity > -1) && (
                 <Grid
                   key={_id}
                   item

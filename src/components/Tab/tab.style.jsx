@@ -7,10 +7,11 @@ const tabStyle = makeStyles((theme) => ({
     backgroundColor: (props) => (props.bgColor && props.bgColor),
     position: 'absolute',
     padding: '5px 10px',
-    top: '0px',
+    top: '-2%',
     right: '0px',
     fontSize: '0.9rem',
-    boxShadow: '1px 1px rgba(0, 0, 0, 0.5)',
+    boxShadow: '0.5px 0.5px rgba(0, 0, 0, 0.5)',
+    borderRadius: '5px',
   },
 
   'text--default': {

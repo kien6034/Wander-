@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
 import CustomTypography from "../../components/Typography/typography";
-import cardStyle from "./card.style";
+import cardStyle from "./fcard.style";
 import CTab from "../../components/Tab/tab";
 import ProviderThumb from "../provider_thumb/provider_thumb";
 
@@ -30,45 +30,31 @@ const CustomCard = (props) =>
           <CTab ctype="New" color="red" bgColor="#fafdff" />
           <CardContent className={classes.cardContent}>
             <CustomTypography
-              // txtStyle="text--title"
-              txtType="text--light"
-              fontSize="15px"
-              txtComponent="h3"
+              txtType="text--bold"
               style={{
-                // height: "38px",
                 overflow: "hidden",
                 whiteSpace: "pre-wrap",
-                margin: "14px 0",
+                color: "#666",
+                fontSize: "0.8rem",
               }}
             >
-              <span style = {{ color: 'red' }}>{data.quantity.remain}/{data.quantity.init}</span> products left
+              Lunch
+              <span>
+                &nbsp;in
+              </span>
+              <span style={{ color: "red" }}>
+                &nbsp;Hanoi
+              </span>
             </CustomTypography>
             <CustomTypography
-              color="rgba(0, 0, 0, 0.5);"
-              txtType="text--light"
-              txtColor="textSecondary"
-              fontSize="14px"
-              txtComponent="p"
-            >
-              Lunch in Hanoi
-            </CustomTypography>
-            <CustomTypography
-              txtStyle="text--category"
-              txtType="text--bold"
-              fontSize="22px"
+              txtType="text--medium"
+              txtColor="textPrimary"
+              fontSize="1.1rem"
               txtComponent="h3"
+              color="#222333"
+              style={{ paddingTop: "5px" }}
             >
               {data.productName}
-            </CustomTypography>
-            <CustomTypography
-              color="rgba(0, 0, 0, 0.5);"
-              txtType="text--light"
-              txtColor="textSecondary"
-              fontSize="14px"
-              txtComponent="p"
-            >
-              {data.numberSold}
-              {" Sold"}
             </CustomTypography>
             <ProviderThumb height="2.3rem" />
           </CardContent>

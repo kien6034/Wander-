@@ -5,7 +5,7 @@ const customContainer = makeStyles({
     // maxWidth: "1295px",
     // margin: "0 auto",
     position: "relative",
-    backgroundColor: "#000000",
+    backgroundColor: "#08A05C",
     padding: "20px 0",
   },
   content: {
@@ -43,7 +43,7 @@ const customContainer = makeStyles({
     top: "0",
     left: "0",
     objectFit: "cover",
-    objectPosition: "center center",
+    objectPosition: "top left",
   },
   img2: {
     position: "absolute",
@@ -93,7 +93,7 @@ const customContainer = makeStyles({
     transition: ".3s",
     padding: "15px 25px 16px",
     width: "auto",
-    // background: '#000',
+    background: 'rgb(239, 111, 108) ',
     color: "#fff",
     letterSpacing: "-.75px",
   },

@@ -45,9 +45,11 @@ const fakeData = [
 
 const TYPES = ['product', 'brand'];
 
+
 const CardContainer = ({
   data,
   showCategory,
+  showProvider,
   type,
   title,
 }) => (
@@ -92,7 +94,7 @@ const CardContainer = ({
         ? data.map((doc) => (
             // eslint-disable-next-line no-underscore-dangle
             <Grid key={doc._id} item xs={6} lg={3} md={6}>
-              <CustomCard data={doc} type={type} />
+              <CustomCard data={doc} type={type} showProvider={showProvider} />
             </Grid>
           ))
 
@@ -120,12 +122,14 @@ CardContainer.propTypes = {
   type: PropTypes.oneOf(TYPES),
   title: PropTypes.string,
   showCategory: PropTypes.bool,
+  showProvider: PropTypes.bool,
 };
 
 CardContainer.defaultProps = {
   data: fakeData,
   type: TYPES[0],
   showCategory: true,
+  showProvider: true,
   title: '',
 };
 

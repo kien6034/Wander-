@@ -15,7 +15,6 @@ const UserAccount = ({ match }) =>
   return (
     <BrowserRouter>
       <Switch>
-
         <Route exact path="/account/profile/edit" component={ProfileEditor} />
 
         <Route to="/account">

@@ -8,6 +8,30 @@ import buyingContainerStyle from './buying.style';
 import Shadow from '../../../components/Shadow/shadow';
 import { FetchOrderData } from '../../../redux/actions/orderAction';
 
+const data = [
+  {
+    id: 1,
+    productName: 'Pizza',
+    status: 'Pending',
+    purchase_date: '24/07/2021',
+    price: 'donate',
+  },
+  {
+    id: 2,
+    productName: 'Pho',
+    status: 'Pending',
+    purchase_date: '24/07/2021',
+    price: 'donate',
+  },
+  {
+    id: 3,
+    productName: 'Taophu',
+    status: 'Pending',
+    purchase_date: '24/07/2021',
+    price: 'donate',
+  },
+]
+
 const BuyingContainer = () =>
 {
   const classes = buyingContainerStyle();
@@ -79,6 +103,8 @@ const BuyingContainer = () =>
     purchaseDate: order.purchaseDate !== null ? new Date(order.purchaseDate) : null,
     price: order.price,
   }));
+
+  const fkrows= data;
 
   if (userState.loading || orderState.loading)
   {

@@ -13,7 +13,7 @@ const TYPES = ["product", "brand"];
 
 const CustomCard = (props) =>
 {
-  const { data, type, ...rest } = props;
+  const { data, type, showProvider, ...rest } = props;
   const classes = cardStyle(rest);
   const urlKey = type === TYPES[0] ? `/product/${data.urlKey}` : `./${data.urlKey}`;
 
@@ -56,7 +56,7 @@ const CustomCard = (props) =>
             >
               {data.productName}
             </CustomTypography>
-            <ProviderThumb height="2.3rem" />
+            {showProvider ? <ProviderThumb /> :<div></div>}
           </CardContent>
         </Card>
       ) : (
@@ -87,6 +87,7 @@ CustomCard.propTypes = {
     imgBrandSrc: PropTypes.string,
   }),
   type: PropTypes.oneOf(TYPES),
+  showProvider: PropTypes.bool,
 };
 
 CustomCard.defaultProps = {
@@ -99,6 +100,7 @@ CustomCard.defaultProps = {
     imgBrandSrc: "",
   },
   type: TYPES[0],
+  showProvider: true,
 };
 
 export default CustomCard;

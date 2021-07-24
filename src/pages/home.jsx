@@ -112,13 +112,13 @@ function Home()
       <ContentHeader />
       <CarouselWithTab />
       <Container maxWidth="md">
-        <CardContainer type="brand" title="Popular Brands" data={DataBrand} />
+        <CardContainer type="brand" title="Category" data={DataBrand} />
         <CardContainer
-          title="Most Popular"
+          title="Latest Product"
           data={homeState.homeData.mostPopular}
         />
         <CardContainer
-          title="What's trending"
+          title="From our top provider"
           data={homeState.homeData.trending}
         />
         <div style={{

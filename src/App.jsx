@@ -9,7 +9,7 @@ import CustomTheme from './theme';
 import AppRoute from './utils/AppRoute';
 import Home from './pages/home';
 import About from './pages/about';
-import ChatBox from './pages/new/chatbox/chatbox';
+import ChatBox from './pages/new/chatbox/chatbox2';
 import LoginRegisterForm from './container/authen/login_register_form';
 import Brand from './template/brand/brand';
 import Product from './template/product';
@@ -99,7 +99,7 @@ function App()
             />
             <AppRoute
               exact
-              path="/chatbox/:user_id"
+              path="/chatbox/"
               component={ChatBox}
               layout={LayoutDefault}
             />

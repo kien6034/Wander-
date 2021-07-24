@@ -32,6 +32,10 @@ const Navbar = (props) =>
       path: '/provider',
     },
     {
+      title: 'Chatbox',
+      path: '/chatbox',
+    },
+    {
       title: '404',
       path: '/404',
     },

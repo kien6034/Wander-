@@ -14,6 +14,7 @@ import Avatar from '@material-ui/core/Avatar';
 import Fab from '@material-ui/core/Fab';
 import Container from '@material-ui/core/Container';
 import SendIcon from '@material-ui/icons/Send';
+import Shadow from '../../../components/Shadow/shadow';
 
 const useStyles = makeStyles({
   table: {
@@ -39,12 +40,15 @@ const Chat = () => {
   const classes = useStyles();
 
   return (
-      <Container>
+      <React.Fragment>
+      <Shadow />
+      <Container style={{ marginTop: "20px", marginBottom: "20px"}}>
         <Grid container>
             <Grid item xs={12} >
                 <Typography variant="h5" className="header-message">Private Chatbox</Typography>
             </Grid>
         </Grid>
+        <br/>
         <Grid container component={Paper} className={classes.chatSection}>
             <Grid item xs={3} className={classes.borderRight500}>
                 <List>
@@ -127,6 +131,7 @@ const Chat = () => {
             </Grid>
         </Grid>
       </Container>
+      </React.Fragment>
   );
 }
 

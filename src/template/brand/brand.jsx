@@ -30,7 +30,7 @@ const Brand = ({ match }) =>
       // Generate brand page title
       title += `${text} `;
       // Generate brand page breadcrumbs data
-      let href = "/brand";
+      let href = "/marketplace";
       for (let i = 0; i <= index; i += 1)
       {
         href += `/${textRoutes[i]}`;
@@ -108,18 +108,20 @@ const Brand = ({ match }) =>
   }
   return (
     <Container maxWidth="md">
-      <Grid className={classes.root} container>
+      <Grid className={classes.root} container style={{ alignItems: "center" }}>
+        <br/>
+        <br/>
         <CustomTypography
           component="h2"
           txtStyle="text--heading"
           style={{ textTransform: "capitalize" }}
+          color="#08A05C"
         >
           {titleBrand}
         </CustomTypography>
-        <CustomTypography component="p" txtType="text--light" style={{ maxWidth: "450px" }}>
-          {`Buy and sell tees, hoodies, accessories and more from streetwear
-          juggernaught ${titleBrand} on ProjectX here!`}
-        </CustomTypography>
+        {/* <CustomTypography component="p" txtType="text--light" style={{ maxWidth: "450px" }}>
+          {`Provider product like Food, Organic Food, Accessories and more from our awesome privider, Here is from our base ${titleBrand} on ProjectX here!`}
+        </CustomTypography> */}
       </Grid>
       <Grid className={classes.gridContainer} container spacing={2}>
         <Grid className={classes.leftSide} item xs={3}>

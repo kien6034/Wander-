@@ -43,7 +43,7 @@ const customContainer = makeStyles({
     top: "0",
     left: "0",
     objectFit: "cover",
-    objectPosition: "center center",
+    objectPosition: "top left",
   },
   img2: {
     position: "absolute",

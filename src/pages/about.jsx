@@ -4,7 +4,7 @@ import AboutGrid from "../template/about/about";
 import StepMedia from "../template/about/image";
 import FAQs from "../template/about/faqs";
 import Instruction from "../template/about/instruction";
-import ShopCategories from "../template/about/shop";
+// import ShopCategories from "../template/about/shop";
 
 function About()
 {
@@ -15,7 +15,7 @@ function About()
       <StepMedia />
       <Instruction />
       <FAQs />
-      <ShopCategories />
+      {/* <ShopCategories /> */}
     </React.Fragment>
   );
 }

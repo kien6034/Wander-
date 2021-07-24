@@ -41,7 +41,7 @@ const customInstruction = makeStyles({
   },
   block: {
     margin: "35px auto",
-    marginTop: "150px",
+    // marginTop: "150px",
     textAlign: "center",
   },
   headline2: {

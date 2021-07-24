@@ -18,7 +18,7 @@ function StepMedia()
           <img
             className={classes.contain}
             alt="shoe"
-            src="https://stockx.com/about/wp-content/uploads/2020/12/Nike-React-Element-55-Kendrick-Lamar-removebg-preview.png"
+            src="https://image.flaticon.com/icons/png/128/2911/2911162.png"
           />
         </div>
         {/* <div className={classes.imghidden}>

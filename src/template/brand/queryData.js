@@ -1,23 +1,19 @@
 export const brandQueries = {
-  adidas: [
+  Food: [
     {
-      name: "yeezy",
-      value: "yeezy",
+      name: "Organic Food",
+      value: "Organic Food",
     },
     {
-      name: "v1",
-      value: "v1",
+      name: "Dry Food",
+      value: "Dry Food",
     },
     {
-      name: "v2",
-      value: "v2",
-    },
-    {
-      name: "350",
-      value: "350",
+      name: "Dairy Food",
+      value: "Dairy Food",
     },
   ],
-  nike: [
+  "Not Food": [
     {
       name: "air force",
       value: "air force",
@@ -47,7 +43,7 @@ export const brandQueries = {
       value: "running",
     },
   ],
-  "air jordan": [
+  "Remaining": [
     {
       name: "one",
       value: "one",

@@ -20,7 +20,7 @@ const DataBrand = [
       'https://static.euronews.com/articles/stories/05/46/11/34/1440x810_cmsv2_f54fdc9f-16b4-5eda-be02-37d88540662c-5461134.jpg',
     imgBrandSrc:
       '',
-    urlKey: 'brand/sneakers/jordan',
+    urlKey: 'marketplace/OrganicFood',
   },
   {
     id: nanoid(),
@@ -29,7 +29,7 @@ const DataBrand = [
       'https://cdn.huongnghiepaau.com/wp-content/uploads/2017/12/851a3e9c866bd8216df247b9d7bec9b3.jpg',
     imgBrandSrc:
       '',
-    urlKey: 'brand/sneakers/nike',
+    urlKey: 'marketplace/DryFood',
   },
   {
     id: nanoid(),
@@ -38,7 +38,7 @@ const DataBrand = [
       'https://www.escoffieronline.com/wp-content/uploads/2013/04/iStock-995038782-small.jpg',
     imgBrandSrc:
       '',
-    urlKey: 'brand/sneakers/adidas',
+    urlKey: 'marketplace/NotFood',
   },
 ];
 
@@ -126,7 +126,7 @@ function Home()
           margin: '20px 0',
         }}
         >
-          <Link to="/brand/sneakers" style={{ textDecoration: 'none' }}>
+          <Link to="/marketplace" style={{ textDecoration: 'none' }}>
             <CustomButton backgroundColor="primary" buttonSize="btn--large">
               Browse Thousands of Avaible on our Sharing Marketplace
             </CustomButton>
@@ -134,7 +134,7 @@ function Home()
         </div>
       </Container>
       {/* <PosterHome /> */}
-      {/* <About /> */}
+      <About />
       <Container>
         <DashBoard data={DataDashBoard}/>
       </Container>

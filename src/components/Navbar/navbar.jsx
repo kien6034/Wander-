@@ -25,7 +25,11 @@ const Navbar = (props) =>
     },
     {
       title: 'Marketplace',
-      path: '/brand/sneakers',
+      path: '/Marketplace/all',
+    },
+    {
+      title: 'Provider',
+      path: '/provider',
     },
     {
       title: '404',
@@ -37,7 +41,7 @@ const Navbar = (props) =>
     },
     {
       title: `${!userState.isLogin ? 'Sign Up' : 'Account'}`,
-      path: '/account',
+      path: `${!userState.isLogin ? '/login' : '/account'}`,
     },
   ];
 

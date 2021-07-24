@@ -272,7 +272,7 @@ const Product = ({ match }) =>
 
   const linkRoutes = textRoutes.map((text, index) =>
   {
-    let href = "/brand";
+    let href = "/marketplace";
     for (let i = 0; i <= index; i += 1)
     {
       href += `/${textRoutes[i]}`;

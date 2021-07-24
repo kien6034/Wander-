@@ -2,37 +2,37 @@ import { nanoid } from 'nanoid';
 
 const newsData = [
   {
-    title: 'Air Jordan',
+    title: 'Our Provider',
     categoryLink: 'https://stockx.com/retro-jordans',
     id: nanoid(),
     items: [
       {
-        name: 'Jordan 13',
+        name: 'Wander 1',
         link: 'https://stockx.com/retro-jordans/air-jordan-13',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 1',
+        name: 'Wander 2',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
       {
-        name: 'Womens Jordans',
+        name: 'Wander 3',
         link: 'https://stockx.com/retro-jordans/women',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 5',
+        name: 'Wander 4',
         link: 'https://stockx.com/retro-jordans/air-jordan-5',
         id: nanoid(),
       },
       {
-        name: 'Jordan 1 Mid',
+        name: 'Wander 5',
         link: 'https://stockx.com/retro-jordans/air-jordan-1/mid',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 4',
+        name: 'Wander 6',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
@@ -40,37 +40,37 @@ const newsData = [
     ],
   },
   {
-    title: 'Air Jordan',
+    title: 'Our Provider',
     categoryLink: 'https://stockx.com/retro-jordans',
     id: nanoid(),
     items: [
       {
-        name: 'Jordan 13',
+        name: 'Wander 1',
         link: 'https://stockx.com/retro-jordans/air-jordan-13',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 1',
+        name: 'Wander 2',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
       {
-        name: 'Womens Jordans',
+        name: 'Wander 3',
         link: 'https://stockx.com/retro-jordans/women',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 5',
+        name: 'Wander 4',
         link: 'https://stockx.com/retro-jordans/air-jordan-5',
         id: nanoid(),
       },
       {
-        name: 'Jordan 1 Mid',
+        name: 'Wander 5',
         link: 'https://stockx.com/retro-jordans/air-jordan-1/mid',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 4',
+        name: 'Wander 6',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
@@ -78,37 +78,37 @@ const newsData = [
     ],
   },
   {
-    title: 'Air Jordan',
+    title: 'Our Provider',
     categoryLink: 'https://stockx.com/retro-jordans',
     id: nanoid(),
     items: [
       {
-        name: 'Jordan 13',
+        name: 'Wander 1',
         link: 'https://stockx.com/retro-jordans/air-jordan-13',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 1',
+        name: 'Wander 2',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
       {
-        name: 'Womens Jordans',
+        name: 'Wander 3',
         link: 'https://stockx.com/retro-jordans/women',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 5',
+        name: 'Wander 4',
         link: 'https://stockx.com/retro-jordans/air-jordan-5',
         id: nanoid(),
       },
       {
-        name: 'Jordan 1 Mid',
+        name: 'Wander 5',
         link: 'https://stockx.com/retro-jordans/air-jordan-1/mid',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 4',
+        name: 'Wander 6',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
@@ -116,37 +116,37 @@ const newsData = [
     ],
   },
   {
-    title: 'Air Jordan',
+    title: 'Our Provider',
     categoryLink: 'https://stockx.com/retro-jordans',
     id: nanoid(),
     items: [
       {
-        name: 'Jordan 13',
+        name: 'Wander 1',
         link: 'https://stockx.com/retro-jordans/air-jordan-13',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 1',
+        name: 'Wander 2',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
       {
-        name: 'Womens Jordans',
+        name: 'Wander 3',
         link: 'https://stockx.com/retro-jordans/women',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 5',
+        name: 'Wander 4',
         link: 'https://stockx.com/retro-jordans/air-jordan-5',
         id: nanoid(),
       },
       {
-        name: 'Jordan 1 Mid',
+        name: 'Wander 5',
         link: 'https://stockx.com/retro-jordans/air-jordan-1/mid',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 4',
+        name: 'Wander 6',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
@@ -154,37 +154,37 @@ const newsData = [
     ],
   },
   {
-    title: 'Air Jordan',
+    title: 'Our Provider',
     categoryLink: 'https://stockx.com/retro-jordans',
     id: nanoid(),
     items: [
       {
-        name: 'Jordan 13',
+        name: 'Wander 1',
         link: 'https://stockx.com/retro-jordans/air-jordan-13',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 1',
+        name: 'Wander 2',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
       {
-        name: 'Womens Jordans',
+        name: 'Wander 3',
         link: 'https://stockx.com/retro-jordans/women',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 5',
+        name: 'Wander 4',
         link: 'https://stockx.com/retro-jordans/air-jordan-5',
         id: nanoid(),
       },
       {
-        name: 'Jordan 1 Mid',
+        name: 'Wander 5',
         link: 'https://stockx.com/retro-jordans/air-jordan-1/mid',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 4',
+        name: 'Wander 6',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
@@ -192,37 +192,37 @@ const newsData = [
     ],
   },
   {
-    title: 'Air Jordan',
+    title: 'Our Provider',
     categoryLink: 'https://stockx.com/retro-jordans',
     id: nanoid(),
     items: [
       {
-        name: 'Jordan 13',
+        name: 'Wander 1',
         link: 'https://stockx.com/retro-jordans/air-jordan-13',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 1',
+        name: 'Wander 2',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },
       {
-        name: 'Womens Jordans',
+        name: 'Wander 3',
         link: 'https://stockx.com/retro-jordans/women',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 5',
+        name: 'Wander 4',
         link: 'https://stockx.com/retro-jordans/air-jordan-5',
         id: nanoid(),
       },
       {
-        name: 'Jordan 1 Mid',
+        name: 'Wander 5',
         link: 'https://stockx.com/retro-jordans/air-jordan-1/mid',
         id: nanoid(),
       },
       {
-        name: 'Air Jordan 4',
+        name: 'Wander 6',
         link: 'https://stockx.com/retro-jordans/air-jordan-4',
         id: nanoid(),
       },

@@ -24,7 +24,7 @@ const Navbar = (props) =>
       path: '/about',
     },
     {
-      title: 'Sneaker',
+      title: 'Marketplace',
       path: '/brand/sneakers',
     },
     {

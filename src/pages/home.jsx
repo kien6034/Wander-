@@ -15,29 +15,29 @@ import DashBoard from '../container/dashboard/dashboard'
 const DataBrand = [
   {
     id: nanoid(),
-    productName: 'JORDAN',
+    productName: 'Organic Food',
     imageurl:
-      'https://cdn.huongnghiepaau.com/wp-content/uploads/2017/12/851a3e9c866bd8216df247b9d7bec9b3.jpg',
+      'https://static.euronews.com/articles/stories/05/46/11/34/1440x810_cmsv2_f54fdc9f-16b4-5eda-be02-37d88540662c-5461134.jpg',
     imgBrandSrc:
-      'https://stockx-assets.imgix.net/png/brand-tiles/img-jordan.png?auto=compress,format',
+      '',
     urlKey: 'brand/sneakers/jordan',
   },
   {
     id: nanoid(),
-    productName: 'NIKE',
+    productName: 'Dry Food',
     imageurl:
-      'https://stockx-assets.imgix.net/png/brand-tiles/sneakers/homepage-tiles-nike-v2.png?auto=compress,format',
+      'https://cdn.huongnghiepaau.com/wp-content/uploads/2017/12/851a3e9c866bd8216df247b9d7bec9b3.jpg',
     imgBrandSrc:
-      'https://stockx-assets.imgix.net/png/brand-tiles/img-nike.png?auto=compress,format',
+      '',
     urlKey: 'brand/sneakers/nike',
   },
   {
     id: nanoid(),
-    productName: 'ADIDAS',
+    productName: 'Not Food',
     imageurl:
-      'https://stockx-assets.imgix.net/png/brand-tiles/sneakers/homepage-tiles-adidas.png?auto=compress,format',
+      'https://www.escoffieronline.com/wp-content/uploads/2013/04/iStock-995038782-small.jpg',
     imgBrandSrc:
-      'https://stockx-assets.imgix.net/png/brand-tiles/img-adidas.png?auto=compress,format',
+      '',
     urlKey: 'brand/sneakers/adidas',
   },
 ];
@@ -128,13 +128,13 @@ function Home()
         >
           <Link to="/brand/sneakers" style={{ textDecoration: 'none' }}>
             <CustomButton backgroundColor="primary" buttonSize="btn--large">
-              Browse Thousands of Sneakers on our Live Marketplace
+              Browse Thousands of Avaible on our Sharing Marketplace
             </CustomButton>
           </Link>
         </div>
       </Container>
       {/* <PosterHome /> */}
-      <About />
+      {/* <About /> */}
       <Container>
         <DashBoard data={DataDashBoard}/>
       </Container>

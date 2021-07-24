@@ -8,6 +8,7 @@ const cardStyle = makeStyles({
     minWidth: (props) => (props.minWidth ? props.minWidth : "none"),
     marginRight: 20,
     position: 'relative',
+    maxWidth: '250px'
   },
   media: {
     paddingTop: '56.25%',

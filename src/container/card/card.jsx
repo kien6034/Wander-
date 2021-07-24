@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CustomTypography from "../../components/Typography/typography";
 import cardStyle from "./card.style";
 import CTab from "../../components/Tab/tab";
+import ProviderThumb from "../provider_thumb/provider_thumb";
 
 const TYPES = ["product", "brand"];
 
@@ -26,7 +27,7 @@ const CustomCard = (props) =>
             title={data.productName}
             style={{ backgroundSize: "contain" }}
           />
-          <CTab ctype="New" color="red" bgColor="orange" />
+          <CTab ctype="New" color="red" bgColor="#fafdff" />
           <CardContent className={classes.cardContent}>
             <CustomTypography
               // txtStyle="text--title"
@@ -34,13 +35,13 @@ const CustomCard = (props) =>
               fontSize="15px"
               txtComponent="h3"
               style={{
-                height: "38px",
+                // height: "38px",
                 overflow: "hidden",
                 whiteSpace: "pre-wrap",
                 margin: "14px 0",
               }}
             >
-              {data.productName}
+              <span style = {{ color: 'red' }}>{data.quantity.remain}/{data.quantity.init}</span> products left
             </CustomTypography>
             <CustomTypography
               color="rgba(0, 0, 0, 0.5);"
@@ -49,7 +50,7 @@ const CustomCard = (props) =>
               fontSize="14px"
               txtComponent="p"
             >
-              Latest price
+              Lunch in Hanoi
             </CustomTypography>
             <CustomTypography
               txtStyle="text--category"
@@ -57,7 +58,7 @@ const CustomCard = (props) =>
               fontSize="22px"
               txtComponent="h3"
             >
-              {`${data.price}$`}
+              {data.productName}
             </CustomTypography>
             <CustomTypography
               color="rgba(0, 0, 0, 0.5);"
@@ -69,6 +70,7 @@ const CustomCard = (props) =>
               {data.numberSold}
               {" Sold"}
             </CustomTypography>
+            <ProviderThumb height="2.3rem" />
           </CardContent>
         </Card>
       ) : (
@@ -107,7 +109,7 @@ CustomCard.defaultProps = {
     price: 100,
     numberSold: 0,
     imageurl:
-      "https://stockx-360.imgix.net/Nike-Dunk-Low-Retro-White-Black-2021/Images/Nike-Dunk-Low-Retro-White-Black-2021/Lv2/img01.jpg?auto=compress&q=90&dpr=2&updated_at=1611084516&fit=clip&fm=webp&ixlib=react-9.0.3&w=1946",
+      "https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg",
     imgBrandSrc: "",
   },
   type: TYPES[0],

@@ -69,7 +69,7 @@ const ProductHeader = ({
 
       {/* Product general info */}
       <Grid container spacing={3}>
-        <Grid item md={7} sm={12} style= {{ display: "flex", alignItems: "center" }}>
+        <Grid item sm={7} xs={12} style= {{ display: "flex", alignItems: "center" }}>
           <div className={classes.info_container}>
             <Breadcrumbs
               separator='|'
@@ -86,7 +86,7 @@ const ProductHeader = ({
               <CustomTypography txtType='text--bold' color='#999'>
                 <span style={{ marginRight: "3px" }}>Quantity: </span>
                 <span style={{ color: theme.palette.primary.main }}>
-                  {quantity}%
+                  {quantity.remain}/{quantity.init} remain
                 </span>
               </CustomTypography>
               {/* <CustomTypography txtType="text--bold" style={{ color: theme.palette.primary.main }}>
@@ -95,7 +95,7 @@ const ProductHeader = ({
             </Breadcrumbs>
           </div>
         </Grid>
-        <Grid item md={5} sm={12}>
+        <Grid item sm={5} xs={12}>
           <CustomTypography txtType='text--bold' color='#999'>
             <span style={{ marginRight: "3px"}}>Provider:</span>
           </CustomTypography>

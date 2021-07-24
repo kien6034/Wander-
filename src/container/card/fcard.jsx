@@ -95,7 +95,7 @@ CustomCard.defaultProps = {
     price: 100,
     numberSold: 0,
     imageurl:
-      "https://stockx-360.imgix.net/Nike-Dunk-Low-Retro-White-Black-2021/Images/Nike-Dunk-Low-Retro-White-Black-2021/Lv2/img01.jpg?auto=compress&q=90&dpr=2&updated_at=1611084516&fit=clip&fm=webp&ixlib=react-9.0.3&w=1946",
+      "https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg",
     imgBrandSrc: "",
   },
   type: TYPES[0],

@@ -4,6 +4,9 @@ import contentHeaderStyle from './content_header.style';
 import CustomTypography from '../../components/Typography/typography';
 import CustomInput from '../../components/Input/Input';
 
+const slogans = ['Fight waste!', 'Help our country!', 'Save our planet!'];
+const slogan = slogans[Math.floor(Math.random() * slogans.length)];
+
 const ContentHeader = (props) =>
 {
   const { bgImage } = props;
@@ -16,12 +19,12 @@ const ContentHeader = (props) =>
         <h1 className={classes.big}>
           <div className={classes['heading--top']}>
             <CustomTypography fontSize="3.5rem" color="#EF6F6C">
-              Buy &amp; Sell
+              GIVE &amp; TAKE
             </CustomTypography>
           </div>
           <div className={classes['heading--bot']}>
             <CustomTypography fontSize="3.5rem" color="white">
-              Food sharing
+              {slogan}
             </CustomTypography>
           </div>
         </h1>

@@ -14,6 +14,10 @@ const initialState = {
     },
     email: '',
     id: '',
+    role: '',
+    phone: '',
+    address: '',
+    sex: ''
   },
   isLogin: false,
   updateSuccessfully: false,

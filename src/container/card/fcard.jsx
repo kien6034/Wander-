@@ -15,7 +15,7 @@ const CustomCard = (props) =>
 {
   const { data, type, showProvider,title, ...rest } = props;
   const classes = cardStyle(rest);
-  const urlKey = type === TYPES[0] ? `/product/${data.urlKey}` : `./${data.urlKey}`;
+  const urlKey = type === TYPES[0] ? `/product/${data._id}` : `./${data.urlKey}`;
 
   return (
       <div>

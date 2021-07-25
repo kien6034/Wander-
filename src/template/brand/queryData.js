@@ -1,46 +1,26 @@
 export const brandQueries = {
   Food: [
     {
-      name: "Organic Food",
-      value: "Organic Food",
+      name: "Vegetables",
+      value: "vegetables",
     },
     {
-      name: "Dry Food",
-      value: "Dry Food",
+      name: "Meat",
+      value: "meat",
     },
     {
       name: "Dairy Food",
-      value: "Dairy Food",
+      value: "diary",
     },
   ],
-  "Not Food": [
+  "Others": [
     {
-      name: "air force",
-      value: "air force",
+      name: "Drinks",
+      value: "drinks",
     },
     {
-      name: "Air Max",
-      value: "air max",
-    },
-    {
-      name: "yeezy",
-      value: "yeezy",
-    },
-    {
-      name: "one",
-      value: "one",
-    },
-    {
-      name: "nike basketball",
-      value: "nike basketball",
-    },
-    {
-      name: "dunk",
-      value: "dunk",
-    },
-    {
-      name: "running",
-      value: "running",
+      name: "Snack",
+      value: "snack",
     },
   ],
   "Remaining": [
@@ -83,111 +63,111 @@ export const brandQueries = {
   ],
 };
 
-export const genderQueries = [
-  {
-    name: "men",
-    value: "men",
-  },
-  {
-    name: "women",
-    value: "women",
-  },
-  {
-    name: "child",
-    value: "child",
-  },
-  {
-    name: "preschool",
-    value: "preschool",
-  },
-  {
-    name: "infant",
-    value: "infant",
-  },
-  {
-    name: "toddler",
-    value: "toddler",
-  },
-];
+// export const genderQueries = [
+//   {
+//     name: "men",
+//     value: "men",
+//   },
+//   {
+//     name: "women",
+//     value: "women",
+//   },
+//   {
+//     name: "child",
+//     value: "child",
+//   },
+//   {
+//     name: "preschool",
+//     value: "preschool",
+//   },
+//   {
+//     name: "infant",
+//     value: "infant",
+//   },
+//   {
+//     name: "toddler",
+//     value: "toddler",
+//   },
+// ];
 
-export const yearQueries = [
-  {
-    name: "<2010",
-    value: "<2010",
-  },
-  {
-    name: "2011",
-    value: "2011",
-  },
-  {
-    name: "2012",
-    value: "2012",
-  },
-  {
-    name: "2013",
-    value: "2013",
-  },
-  {
-    name: "2014",
-    value: "2014",
-  },
-  {
-    name: "2015",
-    value: "2015",
-  },
-  {
-    name: "2016",
-    value: "2016",
-  },
-  {
-    name: "2017",
-    value: "2017",
-  },
-  {
-    name: "2018",
-    value: "2018",
-  },
-  {
-    name: "2019",
-    value: "2019",
-  },
-  {
-    name: "2020",
-    value: "2020",
-  },
-  {
-    name: "2021",
-    value: "2021",
-  },
-];
+// export const yearQueries = [
+//   {
+//     name: "<2010",
+//     value: "<2010",
+//   },
+//   {
+//     name: "2011",
+//     value: "2011",
+//   },
+//   {
+//     name: "2012",
+//     value: "2012",
+//   },
+//   {
+//     name: "2013",
+//     value: "2013",
+//   },
+//   {
+//     name: "2014",
+//     value: "2014",
+//   },
+//   {
+//     name: "2015",
+//     value: "2015",
+//   },
+//   {
+//     name: "2016",
+//     value: "2016",
+//   },
+//   {
+//     name: "2017",
+//     value: "2017",
+//   },
+//   {
+//     name: "2018",
+//     value: "2018",
+//   },
+//   {
+//     name: "2019",
+//     value: "2019",
+//   },
+//   {
+//     name: "2020",
+//     value: "2020",
+//   },
+//   {
+//     name: "2021",
+//     value: "2021",
+//   },
+// ];
 
-export const priceQueries = [
-  {
-    name: "under $100",
-    value: "<100",
-  },
-  {
-    name: "$100 - $200",
-    value: "100-200",
-  },
-  {
-    name: "$200 - $300",
-    value: "200-300",
-  },
-  {
-    name: "$300 - $400",
-    value: "300-400",
-  },
-  {
-    name: "$400 - $500",
-    value: "400-500",
-  },
-  {
-    name: "$500 - $600",
-    value: "500-500",
-  },
-  {
-    name: "$600+",
-    value: ">600",
-  },
-];
+// export const priceQueries = [
+//   {
+//     name: "under $100",
+//     value: "<100",
+//   },
+//   {
+//     name: "$100 - $200",
+//     value: "100-200",
+//   },
+//   {
+//     name: "$200 - $300",
+//     value: "200-300",
+//   },
+//   {
+//     name: "$300 - $400",
+//     value: "300-400",
+//   },
+//   {
+//     name: "$400 - $500",
+//     value: "400-500",
+//   },
+//   {
+//     name: "$500 - $600",
+//     value: "500-500",
+//   },
+//   {
+//     name: "$600+",
+//     value: ">600",
+//   },
+// ];

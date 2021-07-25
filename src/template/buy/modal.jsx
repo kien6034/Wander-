@@ -34,7 +34,7 @@ const CustomModal = ({
               fontSize='30px'
               txtColor='primary'
             >
-              Purchase complete!
+              Order complete!
             </CustomTypography>
             <hr />
             <img
@@ -49,8 +49,8 @@ const CustomModal = ({
             />
             <br />
             <CustomTypography txtType='text--light' fontSize='20px'>
-              Thanks you for buying <strong>{productName}</strong>, Size:{" "}
-              <strong>{size}</strong> with us!
+              Thanks you for order <strong>{productName}</strong>, Donation:{" "}
+              <strong>{size}</strong> for the provider with us!
             </CustomTypography>
             <br />
             <CustomTypography
@@ -71,7 +71,7 @@ const CustomModal = ({
             >
               <span style={{ display: "flex" }}>
                 <CustomTypography txtType='text--light' txtComponent='h3'>
-                  Processing Fee
+                  Donation Fee
                 </CustomTypography>
               </span>
               <CustomTypography
@@ -79,7 +79,7 @@ const CustomModal = ({
                 txtColor='textPrimary'
                 txtType='text--light'
               >
-                ${price}
+                {size}
               </CustomTypography>
             </div>
             <div
@@ -98,7 +98,7 @@ const CustomModal = ({
                 </CustomTypography>
               </span>
               <CustomTypography txtColor='textPrimary' txtType='text--light'>
-                $10
+                0$
               </CustomTypography>
             </div>
             <div
@@ -115,7 +115,7 @@ const CustomModal = ({
                 </CustomTypography>
               </span>
               <CustomTypography txtColor='textPrimary' txtType='text--light'>
-                <strong>${price + 10}</strong>
+                <strong>{size}</strong>
               </CustomTypography>
             </div>
             <CustomTypography

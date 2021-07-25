@@ -86,6 +86,15 @@ function RegisterComponent()
 
   return (
     <form onSubmit={handleSubmit}>
+      {userState.error == '' && userState.isSend && !userState.loading && (
+        <Alert
+          variant="outlined"
+          severity="success"
+          className={classes.successStyle}
+        >
+          Register successfully! Please login to continue!
+        </Alert>
+      )}
       {userState.error !== '' && !userState.isOnLoginTab && (
         <Alert
           variant="outlined"

@@ -9,7 +9,9 @@ import CustomTheme from './theme';
 import AppRoute from './utils/AppRoute';
 import Home from './pages/home';
 import About from './pages/about';
+import ChatBox from './pages/new/chatbox/chatbox2';
 import Provider from './pages/provider/provider';
+import CreateProduct from './pages/createProduct/createProduct';
 import LoginRegisterForm from './container/authen/login_register_form';
 import Brand from './template/brand/brand';
 import Product from './template/product';
@@ -60,6 +62,12 @@ function App()
             />
             <AppRoute
               exact
+              path="/createProduct"
+              component={CreateProduct}
+              layout={LayoutDefault}
+            />
+            <AppRoute
+              exact
               path="/provider"
               component={Provider}
               layout={LayoutDefault}
@@ -99,6 +107,12 @@ function App()
               isMainPage={false}
             />
             <AppRoute
+              path="/chatbox/:id?"
+              component={ChatBox}
+              layout={LayoutDefault}
+              isMainPage={false}
+            />
+            <AppRoute
               exact
               path="/marketplace/:category/:tag?/:tag2?/:tag3?/:tag4?/:tag5?"
               component={Brand}
@@ -110,9 +124,9 @@ function App()
               component={HomePage}
               layout={LayoutDefault}
             />     
-            <Redirect exact from="/marketplace" to="/marketplace/sneakers" />
+            <Redirect exact from="/marketplace" to="/marketplace/all" />
             <Redirect exact from="/product" to="/marketplace/all" />
-            <Redirect from="*" to="/404" />
+            {/* <Redirect from="*" to="/404" /> */}
           </Switch>
         </BrowserRouter>
       </ThemeProvider>

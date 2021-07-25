@@ -80,7 +80,7 @@ const BuyingContainer = () =>
     },
     {
       field: 'purchaseDate',
-      headerName: 'Purchase date',
+      headerName: 'Order date',
       type: 'dateTime',
       flex: 0.3,
       valueFormatter: (params) => (params.value ? params.value.toUTCString() : params.value),
@@ -89,7 +89,7 @@ const BuyingContainer = () =>
     {
       field: 'price',
       type: 'number',
-      headerName: 'Price ($)',
+      headerName: 'Donation ($)',
       flex: 0.3,
       headerClassName: 'padding-right',
       cellClassName: 'padding-right',

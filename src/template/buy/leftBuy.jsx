@@ -16,10 +16,7 @@ const LeftBuy = ({
       </CustomTypography>
       <div style={{ fontSize: "16px", margin: "20px 0" }}>
         <span>
-          Price: <strong>{price}$ </strong>
-        </span>
-        <span>
-          | U.S. Men&apos;s Size <strong>{size}</strong>
+          Donation: <strong>{size}</strong>
         </span>
       </div>
       <img

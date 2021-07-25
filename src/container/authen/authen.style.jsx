@@ -24,6 +24,10 @@ const authenStyle = makeStyles({
     backgroundColor: '#fff3f3',
     marginTop: '20px',
   },
+  successStyle: {
+    backgroundColor: '#edf7ee',
+    marginTop: '20px',
+  },
 });
 
 export default authenStyle;

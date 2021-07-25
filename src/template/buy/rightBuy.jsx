@@ -19,7 +19,7 @@ const RightBuy = ({ quantity, price, size /* , urlKey */ }) =>
       <div className={classes.alarm}>
         <AccessAlarmIcon />
         <CustomTypography fontSize="14px" style={{ marginLeft: "5px" }}>
-          Only {quantity} left in this size
+          Only to donate {quantity} to support the provider
         </CustomTypography>
       </div>
       {/* <Link to={`/product/${urlKey}`} style={{ textDecoration: "none", width: "100%" }}> */}
@@ -28,14 +28,14 @@ const RightBuy = ({ quantity, price, size /* , urlKey */ }) =>
         color="secondary"
         className={classes.buttonChoose}
       >
-        <strong>U.S. Men&apos;s Size {size}</strong>
+        <strong>Donation amount: {size}</strong>
         <EditIcon fontSize="small" color="disabled" />
       </Button>
       {/* </Link> */}
       <Paper style={{ background: "white", padding: "20px", width: "100%" }}>
         <div className={classes.textCenter}>
           <CustomButton style={{ borderRadius: "30px", padding: "10px 40px" }}>
-            BUY IT NOW
+            Take it now
           </CustomButton>
         </div>
         <br />
@@ -54,7 +54,7 @@ const RightBuy = ({ quantity, price, size /* , urlKey */ }) =>
           <TextField
             style={{ flexGrow: "4" }}
             id="outlined-basic"
-            label={price}
+            label={size}
             variant="outlined"
             disabled
           />
@@ -66,7 +66,7 @@ const RightBuy = ({ quantity, price, size /* , urlKey */ }) =>
           txtType="text--light"
           className={classes.textCenter}
         >
-          You are about to purchase this product at the lowest Ask price
+          You are about to order this product at the lowest Ask price
         </CustomTypography>
         <br />
         <br />
@@ -81,7 +81,7 @@ const RightBuy = ({ quantity, price, size /* , urlKey */ }) =>
           >
             <span style={{ display: "flex" }}>
               <CustomTypography txtType="text--light" txtComponent="h3">
-                Processing Fee
+                Donation Fee
               </CustomTypography>
             </span>
             <CustomTypography
@@ -89,7 +89,7 @@ const RightBuy = ({ quantity, price, size /* , urlKey */ }) =>
               txtColor="textPrimary"
               txtType="text--light"
             >
-              ${price}
+              {size}
             </CustomTypography>
           </div>
           <div
@@ -108,7 +108,7 @@ const RightBuy = ({ quantity, price, size /* , urlKey */ }) =>
               </CustomTypography>
             </span>
             <CustomTypography txtColor="textPrimary" txtType="text--light">
-              $10
+              0$
             </CustomTypography>
           </div>
           <div
@@ -125,7 +125,7 @@ const RightBuy = ({ quantity, price, size /* , urlKey */ }) =>
               </CustomTypography>
             </span>
             <CustomTypography txtColor="textPrimary" txtType="text--light">
-              <strong>${price + 10}</strong>
+              <strong>${size}</strong>
             </CustomTypography>
           </div>
         </div>

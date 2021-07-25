@@ -98,7 +98,16 @@ function Login()
   return (
     <form onSubmit={handleSubmit}>
       {!userState.loading && userState.isLogin && !isFakeLoading && <Redirect to="/" />}
-      {userState.error !== '' && userState.isOnLoginTab && (
+      {userState.error == '' && userState.isSend && isFakeLoading && (
+        <Alert
+          variant="outlined"
+          severity="success"
+          className={classes.successStyle}
+        >
+          Login successfully! Please wait for the redirection!
+        </Alert>
+      )}
+      {userState.error !== '' && userState.isOnLoginTab  && !userState.loading && (
         <Alert
           variant="outlined"
           severity="error"

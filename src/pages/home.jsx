@@ -20,25 +20,25 @@ const DataBrand = [
       'https://static.euronews.com/articles/stories/05/46/11/34/1440x810_cmsv2_f54fdc9f-16b4-5eda-be02-37d88540662c-5461134.jpg',
     imgBrandSrc:
       '',
-    urlKey: 'marketplace/OrganicFood',
+    urlKey: 'marketplace/Vegetables/green',
+  },
+  {
+    id: nanoid(),
+    productName: 'All',
+    imageurl:
+      'https://cdn.huongnghiepaau.com/wp-content/uploads/2017/12/851a3e9c866bd8216df247b9d7bec9b3.jpg',
+    imgBrandSrc:
+      '',
+    urlKey: 'marketplace/all',
   },
   {
     id: nanoid(),
     productName: 'Dry Food',
     imageurl:
-      'https://cdn.huongnghiepaau.com/wp-content/uploads/2017/12/851a3e9c866bd8216df247b9d7bec9b3.jpg',
-    imgBrandSrc:
-      '',
-    urlKey: 'marketplace/DryFood',
-  },
-  {
-    id: nanoid(),
-    productName: 'Not Food',
-    imageurl:
       'https://www.escoffieronline.com/wp-content/uploads/2013/04/iStock-995038782-small.jpg',
     imgBrandSrc:
       '',
-    urlKey: 'marketplace/NotFood',
+    urlKey: 'marketplace/dry%20food/diary',
   },
 ];
 

@@ -8,6 +8,11 @@ let fakeProvider = [
   {
     name: "Ngxba",
     rating: 4.5,
+    location: {
+      city: "Hanoi",
+      district: "BaDinh",
+      nation: "Vietnam"
+    },
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eos fuga consequatur doloremque, voluptates eligendi voluptatem vitae ratione amet odit corrupti, cumque maxime, voluptatum doloribus temporibus corporis libero. Placeat, debitis.",
     imageBackground: "https://picsum.photos/300/200",
@@ -17,6 +22,11 @@ let fakeProvider = [
   {
     name: "Ngxba2",
     rating: 3,
+    location: {
+      city: "Hanoi",
+      district: "BaDinh",
+      nation: "Vietnam"
+    },
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eos fuga consequatur doloremque, voluptates eligendi voluptatem vitae ratione amet odit corrupti, cumque maxime, voluptatum doloribus temporibus corporis libero. Placeat, debitis.",
     imageBackground: "https://picsum.photos/300/201",
@@ -26,6 +36,11 @@ let fakeProvider = [
   {
     name: "Ngxba3",
     rating: 4,
+    location: {
+      city: "Hanoi",
+      district: "BaDinh",
+      nation: "Vietnam"
+    },
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eos fuga consequatur doloremque, voluptates eligendi voluptatem vitae ratione amet odit corrupti, cumque maxime, voluptatum doloribus temporibus corporis libero. Placeat, debitis.",
     imageBackground: "https://picsum.photos/300/202",
@@ -35,6 +50,11 @@ let fakeProvider = [
   {
     name: "Ngxba4",
     rating: 1,
+    location: {
+      city: "Hanoi",
+      district: "BaDinh",
+      nation: "Vietnam"
+    },
     description:
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eos fuga consequatur doloremque, voluptates eligendi voluptatem vitae ratione amet odit corrupti, cumque maxime, voluptatum doloribus temporibus corporis libero. Placeat, debitis.",
     imageBackground: "https://picsum.photos/300/203",
@@ -97,13 +117,22 @@ function Provider() {
                   textTransform: "uppercase",
                   textDecoration: "none",
                   color: "rgb(8, 160, 92)",
-                  fontSize: "1.5rem"
+                  fontSize: "1.5rem",
                 }}
               >
                 {data.name}
               </CustomTypography>
-              <br/>
-              <br/>
+              {/* <p>{data.location.city}, {data.location.district}, {data.location.nation}</p> */}
+              <CustomTypography
+              color="rgba(0, 0, 0, 0.5);"
+              txtType="text--light"
+              txtColor="textSecondary"
+              fontSize="14px"
+              txtComponent="p"
+              style = {{ margin: "10px 0" }}
+            >
+              {data.location.city}, {data.location.district}, {data.location.nation}
+            </CustomTypography>
               <Rating name="read-only" value={data.rating} readOnly />
               <p style={{ fontSize: "16px" }}>{data.description}</p>
             </Grid>

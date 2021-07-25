@@ -69,7 +69,12 @@ const ProductHeader = ({
 
       {/* Product general info */}
       <Grid container spacing={3}>
-        <Grid item sm={7} xs={12} style= {{ display: "flex", alignItems: "center" }}>
+        <Grid
+          item
+          sm={7}
+          xs={12}
+          style={{ display: "flex", alignItems: "center" }}
+        >
           <div className={classes.info_container}>
             <Breadcrumbs
               separator='|'
@@ -81,15 +86,15 @@ const ProductHeader = ({
             >
               <CustomTypography txtType='text--bold' color='#999'>
                 <span style={{ marginRight: "3px" }}>Quality:</span>
-                <span style={{ color: theme.palette.primary.main }}>New</span>
+                <span style={{ color: "#08A05C" }}>New</span>
               </CustomTypography>
               <CustomTypography txtType='text--bold' color='#999'>
                 <span style={{ marginRight: "3px" }}>Quantity: </span>
-                <span style={{ color: theme.palette.primary.main }}>
+                <span style={{ color: "#08A05C" }}>
                   {quantity.remain}/{quantity.init} remain
                 </span>
               </CustomTypography>
-              {/* <CustomTypography txtType="text--bold" style={{ color: theme.palette.primary.main }}>
+              {/* <CustomTypography txtType="text--bold" style={{ color: "#08A05C" }}>
             100% Authentic
           </CustomTypography> */}
             </Breadcrumbs>
@@ -97,11 +102,11 @@ const ProductHeader = ({
         </Grid>
         <Grid item sm={5} xs={12}>
           <CustomTypography txtType='text--bold' color='#999'>
-            <span style={{ marginRight: "3px"}}>Provider:</span>
+            <span style={{ marginRight: "3px" }}>Provider:</span>
           </CustomTypography>
           <br />
           <Grid container spacing={3}>
-            <Grid item sm={3}>
+            <Grid item sm={2}>
               <Avatar
                 alt='Demo Avatar'
                 src='https://www.minervastrategies.com/wp-content/uploads/2016/03/default-avatar.jpg'
@@ -110,17 +115,17 @@ const ProductHeader = ({
             <Grid item sm={9}>
               <CustomTypography
                 txtType='text--bold'
-                key={donator.id}
-                href={donator.urlKey}
+                key={donator._id}
+                href={`/homepage/${donator._id}`}
                 style={{
                   textTransform: "uppercase",
                   textDecoration: "none",
-                  color: theme.palette.primary.main,
+                  color: "#08A05C",
                 }}
               >
                 {donator.name}
               </CustomTypography>
-              <br/>
+              <br />
               <CustomTypography
                 txtType='text--light'
                 style={{
@@ -213,15 +218,15 @@ const ProductHeader = ({
 
 ProductHeader.propTypes = {
   routes: PropTypes.arrayOf(PropTypes.any).isRequired,
-  price: PropTypes.number.isRequired,
+  // price: PropTypes.number.isRequired,
   productName: PropTypes.string.isRequired,
-  donator: PropTypes.string.isRequired,
-  sizeQuantity: PropTypes.arrayOf(
-    PropTypes.shape({
-      size: PropTypes.string,
-      quantity: PropTypes.number,
-    })
-  ).isRequired,
+  donator: PropTypes.objectOf(PropTypes.string).isRequired,
+  // sizeQuantity: PropTypes.arrayOf(
+  //   PropTypes.shape({
+  //     size: PropTypes.string,
+  //     quantity: PropTypes.number,
+  //   })
+  // ).isRequired,
   urlKey: PropTypes.string.isRequired,
 };
 

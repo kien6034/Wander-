@@ -1,10 +1,10 @@
 import {
-  FETCH_PRODUCTS_REQUEST,
-  FETCH_PRODUCTS_REQUEST_SUCCESS,
-  FETCH_PRODUCTS_REQUEST_FAILURE,
   FETCH_PRODUCT_REQUEST,
-  FETCH_PRODUCT_REQUEST_SUCCESS,
   FETCH_PRODUCT_REQUEST_FAILURE,
+  FETCH_PRODUCT_REQUEST_SUCCESS,
+  FETCH_PRODUCTS_REQUEST,
+  FETCH_PRODUCTS_REQUEST_FAILURE,
+  FETCH_PRODUCTS_REQUEST_SUCCESS,
   UPDATE_PRODUCT_DATA,
 } from "../types/productType";
 
@@ -47,15 +47,20 @@ export const productsReducer = (state = initialProductsState, action) =>
   }
 };
 
+const sampleImage = [
+  "https://upload.wikimedia.org/wikipedia/commons/9/9d/Kiwi_%28Actinidia_chinensis%29_1_Luc_Viatour_edit.jpg",
+  "https://lh3.googleusercontent.com/proxy/6e8JiwJUNPuT7Binq4pOZc4o5CInN5d-n513wevm_OtIkDgjTYitdrSEmw7baJOAxLavHruleBl8RC3V7CLTJTD-o8tBnJuJdtyfPiDILm-jEOYKSu0",
+  "http://suckhoedoisong.vn/Images/thanhloan/2016/06/14/6-tac-dung-bat-ngo-cua-kiwi.jpg",
+  "https://icdn.dantri.com.vn/FaA3gEccccccccccccos/Image/2013/10/kiwi-81013-94dfa.jpg",
+];
+
 const initialProductState = {
   loading: false,
   productData: {
     tags: [],
     _id: "",
     productName: "",
-    price: 0,
-    imageurl: "",
-    tickerSymbol: "",
+    imageurl: sampleImage,
     detail: [
       {
         _id: "",
@@ -64,7 +69,19 @@ const initialProductState = {
       },
     ],
     description: "",
-    sizeQuantity: [{ _id: "", size: "", quantity: 0 }],
+    quantity:{
+      init: 0,
+      remain: 0,
+    },
+    donator:{
+      _id: "",
+      name: "",
+    },
+    rating: 0,
+    location: {
+      city: "",
+      district: "",
+    },
     dateUpdated: "",
   },
   error: "",
@@ -79,7 +96,8 @@ export const productReducer = (state = initialProductState, action) =>
         ...state,
         loading: true,
       };
-    case FETCH_PRODUCT_REQUEST_SUCCESS: {
+    case FETCH_PRODUCT_REQUEST_SUCCESS:
+    {
       return {
         ...state,
         productData: action.payload,
@@ -96,9 +114,7 @@ export const productReducer = (state = initialProductState, action) =>
           tags: [],
           _id: "",
           productName: "",
-          price: 0,
-          imageurl: "",
-          tickerSymbol: "",
+          imageurl: sampleImage,
           detail: [
             {
               _id: "",
@@ -107,7 +123,19 @@ export const productReducer = (state = initialProductState, action) =>
             },
           ],
           description: "",
-          sizeQuantity: [{ _id: "", size: "", quantity: 0 }],
+          quantity:{
+            init: 0,
+            remain: 0,
+          },
+          donator:{
+            _id: "",
+            name: "",
+          },
+          rating: 0,
+          location: {
+            city: "",
+            district: "",
+          },
           dateUpdated: "",
         },
       };

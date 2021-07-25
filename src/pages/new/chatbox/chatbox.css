@@ -1,0 +1,285 @@
+.main {
+  height: 100vh;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background-color: #c5c1c1;
+}
+
+.panel {
+  min-width: 800px;
+  max-width: 1000px;
+  max-height: 800px;
+  width: 100%;
+  height: 80vh;
+  background: #f1f1f1;
+  border-radius: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.panel .top, .panel .mid, .panel .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.panel .top .left, .panel .mid .left, .panel .bottom .left {
+  min-width: 300px;
+  width: 30%;
+}
+
+.panel .top .right, .panel .mid .right, .panel .bottom .right {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.panel .top {
+  height: 50px;
+  width: 100%;
+  background-color: #e2e1e1;
+  -webkit-box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.75);
+}
+
+.panel .top .left {
+  background-color: #f57f62;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.panel .top .left input {
+  padding: 5px 20px;
+  outline: none;
+  border-radius: 5px;
+  border: 2px solid grey;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #eee !important;
+}
+
+.panel .top .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel .mid {
+  height: calc(100% - 100px);
+  margin: 1px 0;
+}
+
+.panel .mid .left {
+  background-color: #f57f62;
+}
+
+.panel .bottom {
+  height: 50px;
+  width: 100%;
+  background-color: #e2e1e1;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.75);
+          box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.75);
+  z-index: 2;
+}
+
+.panel .bottom .left {
+  background-color: #f57f62;
+}
+
+.panel .bottom .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.panel .bottom .right input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  outline: none;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.panel .bottom .right button {
+  width: 70px;
+  margin-left: 20px;
+}
+
+.chat-history {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.chat-history .recepient .holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100px;
+  overflow: hidden;
+  width: 100%;
+  border-bottom: 1px solid grey;
+}
+
+.chat-history .recepient .holder .rleft {
+  height: 100%;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.chat-history .recepient .holder .rleft img {
+  height: 50%;
+  border-radius: 50%;
+}
+
+.chat-history .recepient .holder .rright {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  color: #ddd;
+  font-weight: 400;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-right: 20px;
+}
+
+.chat-history .recepient .holder .rright .rtop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.chat-history .recepient .holder .rright .rtop .name {
+  font-weight: 600;
+}
+
+.chat-history .recepient .holder .rright .rtop .time {
+  color: #a7a7a7;
+}
+
+.chat-history .recepient .holder .rright .rbottom {
+  height: 30px;
+  width: 100%;
+}
+
+.chat-history .recepient .holder .rright .rbottom .message {
+  width: 100%;
+  color: #f0f0f0;
+  white-space: nowrap;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.textGroup .txts .txt {
+  background-color: #c2bdbd;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.textGroup.tgright {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-right: 10px;
+}
+
+.textGroup.tgleft {
+  margin: 10px 0 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.textGroup.tgleft .image {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.textGroup.tgleft .image img {
+  height: 100%;
+}
+
+.textGroup.tgleft .txts {
+  background-color: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border: 1px solid grey;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #f18d30;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/*# sourceMappingURL=chatbox.css.map */

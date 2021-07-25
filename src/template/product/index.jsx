@@ -233,21 +233,22 @@ let sample_relatedProducts = { productsData: [{
   dateUpdated: "20210722",
 }]}
 
+let sizeQuantity =  [{ _id: "random", size: "0$", quantity: 0 }, { _id: "random", size: "5$", quantity: 0 }, { _id: "random", size: "10$", quantity: 2 }, { _id: "random", size: "20$", quantity: 2 }]
 const Product = ({ match }) =>
 {
   const classes = productStyle();
   const { params } = match;
 
   const productState = useSelector((state) => {
-    // if (state.productState.error == "")
-    //   return state.productState.productData
-    // else 
+    if (state.productState.error === "")
+      return state.productState
+    else 
       return sample_product
   });
   const relatedProductsState = useSelector((state) => {
-    // if (state.productsState.error == "")
-    //   return state.relatedProductsState
-    // else 
+    if (state.productsState.error == "")
+      return state.relatedProductsState
+    else 
       return sample_relatedProducts
     });
 
@@ -258,7 +259,7 @@ const Product = ({ match }) =>
     dispatch(FetchProduct(params.urlKey));
   }, [params.urlKey]);
 
-  const { tags } = productState.productData;
+  const { tags } = productState.productData || {tags: []};
 
   const data = {
     category: tags[0],
@@ -273,7 +274,7 @@ const Product = ({ match }) =>
   }, [tags]);
 
   // Generate data for breadcrumbs
-  const textRoutes = [...tags.slice(0, tags.length - 5)];
+  const textRoutes = [...tags.slice(0, tags.length)];
 
   const linkRoutes = textRoutes.map((text, index) =>
   {
@@ -294,7 +295,6 @@ const Product = ({ match }) =>
     href: `/product/${params.urlKey}`,
     text: productState.productData.productName,
   });
-
   // Render Circular Progress while fetching data
   if (productState.loading)
   {
@@ -319,7 +319,7 @@ const Product = ({ match }) =>
           routes={linkRoutes}
           productName={productState.productData.productName}
           donator={productState.productData.donator}
-          sizeQuantity={productState.productData.sizeQuantity}
+          sizeQuantity={sizeQuantity}
           quantity={productState.productData.quantity}
           urlKey={params.urlKey}
         />

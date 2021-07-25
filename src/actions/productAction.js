@@ -20,3 +20,13 @@ export const getProductData = async () =>
   }
   throw new Error("Server error", res);
 };
+
+export const getOwnProduct = async (id) =>
+{
+  const res = await axios.get(`${backEndLink}/api/product/owner/${id}`);
+  if (res.status === 200)
+  {
+    return res.data;
+  }
+  throw new Error("Server error", res);
+};

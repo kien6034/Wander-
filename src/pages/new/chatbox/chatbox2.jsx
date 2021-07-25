@@ -122,8 +122,12 @@ const Chat = () => {
     (async () => {
       try {
         let userInfo = await getUserInfo(id);
+        if (!userInfo.data.success) {
+          throw userInfo;
+        }
         setReceiver(userInfo.data);
       } catch (e) {
+        console.log(e)
         alert("User not found");
       }
     })();
@@ -216,20 +220,24 @@ const Chat = () => {
             </List>
             <Divider />
             <Grid container style={{ padding: "20px" }}>
-              <Grid item xs={11}>
-                <TextField
-                  value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  id="outlined-basic-email"
-                  label="Type Something"
-                  fullWidth
-                />
-              </Grid>
-              <Grid xs={1} align="right">
-                <Fab color="primary" aria-label="add" onClick={onClickSend}>
-                  <SendIcon />
-                </Fab>
-              </Grid>
+              {status === "success" && data?.message && (
+                <>
+                  <Grid item xs={11}>
+                    <TextField
+                      value={input}
+                      onChange={(e) => setInput(e.target.value)}
+                      id="outlined-basic-email"
+                      label="Type Something"
+                      fullWidth
+                    />
+                  </Grid>
+                  <Grid xs={1} align="right">
+                    <Fab color="primary" aria-label="add" onClick={onClickSend}>
+                      <SendIcon />
+                    </Fab>
+                  </Grid>
+                </>
+              )}
             </Grid>
           </Grid>
         </Grid>

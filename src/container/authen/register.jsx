@@ -86,7 +86,7 @@ function RegisterComponent()
 
   return (
     <form onSubmit={handleSubmit}>
-      {userState.error == '' && !userState.isOnLoginTab && userState.success && (
+      {userState.error == '' && userState.isSend && !userState.loading && (
         <Alert
           variant="outlined"
           severity="success"
@@ -95,7 +95,7 @@ function RegisterComponent()
           Register successfully! Please login to continue!
         </Alert>
       )}
-      {userState.error == '' && !userState.isOnLoginTab && (
+      {userState.error !== '' && !userState.isOnLoginTab && (
         <Alert
           variant="outlined"
           severity="error"

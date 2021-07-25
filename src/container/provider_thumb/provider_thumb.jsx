@@ -28,7 +28,7 @@ const ProviderThumb = (props) =>
       <div className={classes.left}>
         <img className={classes.image} src={imageURL} alt="provider" />
         <div className={classes.info}>
-          <div className={classes.providerName}>
+          <div className={classes.providerName} style={{ overflow: "hidden"}}>
             {providerName}
           </div>
           <div className={classes.rate}>
@@ -81,7 +81,7 @@ ProviderThumb.propTypes = {
 ProviderThumb.defaultProps = {
   imageURL: 'https://cdn0.iconfinder.com/data/icons/profession-and-occupation-icons/110/avatar_occupation_profile_cook_kitchener_flunkey_food-512.png',
   providerName: "Wander",
-  rate: 4.3,
+  rate: 5,
   p_id: 1,
   title: 'none',
 };

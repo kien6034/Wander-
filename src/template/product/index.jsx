@@ -233,6 +233,7 @@ let sample_relatedProducts = { productsData: [{
   dateUpdated: "20210722",
 }]}
 
+let sizeQuantity =  [{ _id: "random", size: "0$", quantity: 0 }, { _id: "random", size: "5$", quantity: 0 }, { _id: "random", size: "10$", quantity: 2 }, { _id: "random", size: "20$", quantity: 2 }]
 const Product = ({ match }) =>
 {
   const classes = productStyle();
@@ -318,7 +319,7 @@ const Product = ({ match }) =>
           routes={linkRoutes}
           productName={productState.productData.productName}
           donator={productState.productData.donator}
-          sizeQuantity={productState.productData.sizeQuantity}
+          sizeQuantity={sizeQuantity}
           quantity={productState.productData.quantity}
           urlKey={params.urlKey}
         />

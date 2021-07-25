@@ -17,7 +17,7 @@ const ProductHeader = ({
   routes,
   donator,
   productName,
-  // sizeQuantity,
+  sizeQuantity,
   quantity,
   urlKey,
 }) => {
@@ -69,7 +69,12 @@ const ProductHeader = ({
 
       {/* Product general info */}
       <Grid container spacing={3}>
-        <Grid item sm={7} xs={12} style= {{ display: "flex", alignItems: "center" }}>
+        <Grid
+          item
+          sm={7}
+          xs={12}
+          style={{ display: "flex", alignItems: "center" }}
+        >
           <div className={classes.info_container}>
             <Breadcrumbs
               separator='|'
@@ -97,7 +102,7 @@ const ProductHeader = ({
         </Grid>
         <Grid item sm={5} xs={12}>
           <CustomTypography txtType='text--bold' color='#999'>
-            <span style={{ marginRight: "3px"}}>Provider:</span>
+            <span style={{ marginRight: "3px" }}>Provider:</span>
           </CustomTypography>
           <br />
           <Grid container spacing={3}>
@@ -110,8 +115,8 @@ const ProductHeader = ({
             <Grid item sm={9}>
               <CustomTypography
                 txtType='text--bold'
-                key={donator.id}
-                href={donator.id}
+                key={donator._id}
+                href={`/homepage/${donator._id}`}
                 style={{
                   textTransform: "uppercase",
                   textDecoration: "none",
@@ -120,7 +125,7 @@ const ProductHeader = ({
               >
                 {donator.name}
               </CustomTypography>
-              <br/>
+              <br />
               <CustomTypography
                 txtType='text--light'
                 style={{
@@ -145,14 +150,14 @@ const ProductHeader = ({
             <Paper square classes={{ root: classes.all_size_container }}>
               {
                 // Render size picker
-                // isShowingSizePicker && (
-                //   <SizePicker
-                //     sizeQuantity={sizeQuantity}
-                //     sizeChartButtonOnClick={() => setIsShowingSizePicker(false)}
-                //     changeCurrentSize={(newSize) => setCurrentSize(newSize)}
-                //     currentSize={currentSize}
-                //   />
-                // )
+                isShowingSizePicker && (
+                  <SizePicker
+                    sizeQuantity={sizeQuantity}
+                    sizeChartButtonOnClick={() => setIsShowingSizePicker(false)}
+                    changeCurrentSize={(newSize) => setCurrentSize(newSize)}
+                    currentSize={currentSize}
+                  />
+                )
               }
             </Paper>
           </SimplePopover>

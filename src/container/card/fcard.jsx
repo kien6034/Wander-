@@ -16,7 +16,6 @@ const CustomCard = (props) =>
   const { data, type, showProvider,title, ...rest } = props;
   const classes = cardStyle(rest);
   const urlKey = type === TYPES[0] ? `/product/${data._id}` : `./${data.urlKey}`;
-
   return (
       <div>
         {type === TYPES[0] ? (
@@ -28,7 +27,7 @@ const CustomCard = (props) =>
             title={data.productName}
             style={{ backgroundSize: "contain" }}
           />
-          <CTab ctype="New" color="red" bgColor="#fafdff" />
+          <CTab cType={data.condition} color="red" bgColor="#fafdff" />
           <CardContent className={classes.cardContent}>
             <CustomTypography
               txtType="text--bold"
@@ -39,12 +38,12 @@ const CustomCard = (props) =>
                 fontSize: "0.8rem",
               }}
             >
-              Lunch
+              Meal
               <span>
                 &nbsp;in
               </span>
               <span style={{ color: "red" }}>
-                &nbsp;Hanoi
+                &nbsp; { data.location ? `${data.location.district} ${data.location.city}` : "location"}
               </span>
             </CustomTypography>
             <CustomTypography
@@ -53,7 +52,7 @@ const CustomCard = (props) =>
               fontSize="1.1rem"
               txtComponent="h3"
               color="#222333"
-              style={{ paddingTop: "5px" }}
+              style={{ paddingTop: "5px", textTransform: "uppercase" }}
             >
               {data.productName}
             </CustomTypography>

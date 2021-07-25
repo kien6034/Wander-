@@ -20,28 +20,16 @@ const Navbar = (props) =>
 
   const navLinks = [
     {
-      title: 'About',
-      path: '/about',
-    },
-    {
       title: 'Marketplace',
       path: '/Marketplace/all',
     },
     {
-      title: 'Provider',
+      title: 'About',
+      path: '/about',
+    },
+    {
+      title: 'Our Provider',
       path: '/provider',
-    },
-    {
-      title: 'Chatbox',
-      path: '/chatbox',
-    },
-    {
-      title: 'Create Product',
-      path: '/createProduct',
-    },
-    {
-      title: '404',
-      path: '/404',
     },
     {
       title: `${!userState.isLogin ? 'Login' : 'Logout'}`,

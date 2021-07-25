@@ -23,7 +23,7 @@ CTab.propTypes = {
 };
 
 CTab.defaultProps = {
-  cType: 'New',
+  cType: 'New/Used',
 };
 
 export default CTab;

@@ -22,6 +22,10 @@ const ProviderThumbStyle = makeStyles(() => ({
   },
   providerName: {
     color: '#555',
+    width: "90%",
+    whiteSpace: "nowrap",
+    overflow: "hidden",
+    textOverflow: "ellipsis"
   },
   rate: {
     color: 'black',

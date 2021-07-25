@@ -6,7 +6,7 @@ import Rating from '@material-ui/lab/Rating';
 
 let fakeProvider = [
   {
-    name: "Ngxba",
+    name: "Thanh Tran",
     rating: 4.5,
     location: {
       city: "Hanoi",
@@ -17,10 +17,11 @@ let fakeProvider = [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eos fuga consequatur doloremque, voluptates eligendi voluptatem vitae ratione amet odit corrupti, cumque maxime, voluptatum doloribus temporibus corporis libero. Placeat, debitis.",
     imageBackground: "https://picsum.photos/300/200",
     avatar:
-      "https://huyhoanhotel.com/wp-content/uploads/2016/05/765-default-avatar.png", urlKey:1
+      "https://huyhoanhotel.com/wp-content/uploads/2016/05/765-default-avatar.png", 
+    urlKey: "/homepage/403940fc8fbf8ec0642f596f8019581b"
   },
   {
-    name: "Ngxba2",
+    name: "Nguyen Ba Tung Lam",
     rating: 3,
     location: {
       city: "Hanoi",
@@ -31,35 +32,7 @@ let fakeProvider = [
       "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eos fuga consequatur doloremque, voluptates eligendi voluptatem vitae ratione amet odit corrupti, cumque maxime, voluptatum doloribus temporibus corporis libero. Placeat, debitis.",
     imageBackground: "https://picsum.photos/300/201",
     avatar:
-      "https://huyhoanhotel.com/wp-content/uploads/2016/05/765-default-avatar.png", urlKey:2
-  },
-  {
-    name: "Ngxba3",
-    rating: 4,
-    location: {
-      city: "Hanoi",
-      district: "BaDinh",
-      nation: "Vietnam"
-    },
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eos fuga consequatur doloremque, voluptates eligendi voluptatem vitae ratione amet odit corrupti, cumque maxime, voluptatum doloribus temporibus corporis libero. Placeat, debitis.",
-    imageBackground: "https://picsum.photos/300/202",
-    avatar:
-      "https://huyhoanhotel.com/wp-content/uploads/2016/05/765-default-avatar.png", urlKey:3
-  },
-  {
-    name: "Ngxba4",
-    rating: 1,
-    location: {
-      city: "Hanoi",
-      district: "BaDinh",
-      nation: "Vietnam"
-    },
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Recusandae eos fuga consequatur doloremque, voluptates eligendi voluptatem vitae ratione amet odit corrupti, cumque maxime, voluptatum doloribus temporibus corporis libero. Placeat, debitis.",
-    imageBackground: "https://picsum.photos/300/203",
-    avatar:
-      "https://huyhoanhotel.com/wp-content/uploads/2016/05/765-default-avatar.png", urlKey:4
+      "https://huyhoanhotel.com/wp-content/uploads/2016/05/765-default-avatar.png", urlKey: "/homepage/07a532afe149dd653aaf68d6cc40d563"
   },
 ];
 function Provider() {

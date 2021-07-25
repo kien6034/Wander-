@@ -129,9 +129,11 @@ const Chat = () => {
           }
           setReceiver(userInfo.data);
         } catch (e) {
-          console.log(e);
+          setReceiver(undefined);
           alert("User not found");
         }
+      } else {
+        setReceiver(undefined);
       }
     })();
   }, [id]);
@@ -168,7 +170,7 @@ const Chat = () => {
       <Container style={{ marginTop: "20px", marginBottom: "20px" }}>
         <Grid container>
           <Grid item xs={12}>
-            <Typography variant="h5" className="header-message">
+            <Typography variant='h5' className='header-message'>
               Private Chatbox
             </Typography>
           </Grid>
@@ -187,8 +189,8 @@ const Chat = () => {
                 >
                   <ListItemIcon>
                     <Avatar
-                      alt="Remy Sharp"
-                      src="https://material-ui.com/static/images/avatar/1.jpg"
+                      alt='Remy Sharp'
+                      src='https://material-ui.com/static/images/avatar/1.jpg'
                     />
                   </ListItemIcon>
                   <ListItemText primary={`${v.firstname} ${v.lastname}`} />
@@ -223,19 +225,19 @@ const Chat = () => {
             </List>
             <Divider />
             <Grid container style={{ padding: "20px" }}>
-              {status === "success" && data?.message && (
+              {receiver && (
                 <>
                   <Grid item xs={11}>
                     <TextField
                       value={input}
                       onChange={(e) => setInput(e.target.value)}
-                      id="outlined-basic-email"
-                      label="Type Something"
+                      id='outlined-basic-email'
+                      label='Type Something'
                       fullWidth
                     />
                   </Grid>
-                  <Grid xs={1} align="right">
-                    <Fab color="primary" aria-label="add" onClick={onClickSend}>
+                  <Grid xs={1} align='right'>
+                    <Fab color='primary' aria-label='add' onClick={onClickSend}>
                       <SendIcon />
                     </Fab>
                   </Grid>

@@ -106,7 +106,7 @@ function App()
               isMainPage={false}
             />
             <AppRoute
-              path="/chatbox/:id"
+              path="/chatbox/:id?"
               component={ChatBox}
               layout={LayoutDefault}
               isMainPage={false}

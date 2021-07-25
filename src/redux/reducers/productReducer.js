@@ -60,9 +60,7 @@ const initialProductState = {
     tags: [],
     _id: "",
     productName: "",
-    price: 0,
     imageurl: sampleImage,
-    tickerSymbol: "",
     detail: [
       {
         _id: "",
@@ -71,7 +69,19 @@ const initialProductState = {
       },
     ],
     description: "",
-    sizeQuantity: [{ _id: "", size: "", quantity: 0 }],
+    quantity:{
+      init: 0,
+      remain: 0,
+    },
+    donator:{
+      _id: "",
+      name: "",
+    },
+    rating: 0,
+    location: {
+      city: "",
+      district: "",
+    },
     dateUpdated: "",
   },
   error: "",
@@ -104,9 +114,7 @@ export const productReducer = (state = initialProductState, action) =>
           tags: [],
           _id: "",
           productName: "",
-          price: 0,
           imageurl: sampleImage,
-          tickerSymbol: "",
           detail: [
             {
               _id: "",
@@ -115,7 +123,19 @@ export const productReducer = (state = initialProductState, action) =>
             },
           ],
           description: "",
-          sizeQuantity: [{ _id: "", size: "", quantity: 0 }],
+          quantity:{
+            init: 0,
+            remain: 0,
+          },
+          donator:{
+            _id: "",
+            name: "",
+          },
+          rating: 0,
+          location: {
+            city: "",
+            district: "",
+          },
           dateUpdated: "",
         },
       };

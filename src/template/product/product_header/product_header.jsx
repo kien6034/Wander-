@@ -81,15 +81,15 @@ const ProductHeader = ({
             >
               <CustomTypography txtType='text--bold' color='#999'>
                 <span style={{ marginRight: "3px" }}>Quality:</span>
-                <span style={{ color: theme.palette.primary.main }}>New</span>
+                <span style={{ color: "#08A05C" }}>New</span>
               </CustomTypography>
               <CustomTypography txtType='text--bold' color='#999'>
                 <span style={{ marginRight: "3px" }}>Quantity: </span>
-                <span style={{ color: theme.palette.primary.main }}>
+                <span style={{ color: "#08A05C" }}>
                   {quantity.remain}/{quantity.init} remain
                 </span>
               </CustomTypography>
-              {/* <CustomTypography txtType="text--bold" style={{ color: theme.palette.primary.main }}>
+              {/* <CustomTypography txtType="text--bold" style={{ color: "#08A05C" }}>
             100% Authentic
           </CustomTypography> */}
             </Breadcrumbs>
@@ -111,11 +111,11 @@ const ProductHeader = ({
               <CustomTypography
                 txtType='text--bold'
                 key={donator.id}
-                href={donator.urlKey}
+                href={donator.id}
                 style={{
                   textTransform: "uppercase",
                   textDecoration: "none",
-                  color: theme.palette.primary.main,
+                  color: "#08A05C",
                 }}
               >
                 {donator.name}
@@ -145,14 +145,14 @@ const ProductHeader = ({
             <Paper square classes={{ root: classes.all_size_container }}>
               {
                 // Render size picker
-                isShowingSizePicker && (
-                  <SizePicker
-                    sizeQuantity={sizeQuantity}
-                    sizeChartButtonOnClick={() => setIsShowingSizePicker(false)}
-                    changeCurrentSize={(newSize) => setCurrentSize(newSize)}
-                    currentSize={currentSize}
-                  />
-                )
+                // isShowingSizePicker && (
+                //   <SizePicker
+                //     sizeQuantity={sizeQuantity}
+                //     sizeChartButtonOnClick={() => setIsShowingSizePicker(false)}
+                //     changeCurrentSize={(newSize) => setCurrentSize(newSize)}
+                //     currentSize={currentSize}
+                //   />
+                // )
               }
             </Paper>
           </SimplePopover>
@@ -213,15 +213,15 @@ const ProductHeader = ({
 
 ProductHeader.propTypes = {
   routes: PropTypes.arrayOf(PropTypes.any).isRequired,
-  price: PropTypes.number.isRequired,
+  // price: PropTypes.number.isRequired,
   productName: PropTypes.string.isRequired,
-  donator: PropTypes.string.isRequired,
-  sizeQuantity: PropTypes.arrayOf(
-    PropTypes.shape({
-      size: PropTypes.string,
-      quantity: PropTypes.number,
-    })
-  ).isRequired,
+  donator: PropTypes.objectOf(PropTypes.string).isRequired,
+  // sizeQuantity: PropTypes.arrayOf(
+  //   PropTypes.shape({
+  //     size: PropTypes.string,
+  //     quantity: PropTypes.number,
+  //   })
+  // ).isRequired,
   urlKey: PropTypes.string.isRequired,
 };
 

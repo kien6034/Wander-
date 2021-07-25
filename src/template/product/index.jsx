@@ -239,15 +239,15 @@ const Product = ({ match }) =>
   const { params } = match;
 
   const productState = useSelector((state) => {
-    // if (state.productState.error == "")
-    //   return state.productState.productData
-    // else 
+    if (state.productState.error === "")
+      return state.productState
+    else 
       return sample_product
   });
   const relatedProductsState = useSelector((state) => {
-    // if (state.productsState.error == "")
-    //   return state.relatedProductsState
-    // else 
+    if (state.productsState.error == "")
+      return state.relatedProductsState
+    else 
       return sample_relatedProducts
     });
 
@@ -258,7 +258,7 @@ const Product = ({ match }) =>
     dispatch(FetchProduct(params.urlKey));
   }, [params.urlKey]);
 
-  const { tags } = productState.productData;
+  const { tags } = productState.productData || {tags: []};
 
   const data = {
     category: tags[0],
@@ -294,7 +294,7 @@ const Product = ({ match }) =>
     href: `/product/${params.urlKey}`,
     text: productState.productData.productName,
   });
-
+  console.log(productState)
   // Render Circular Progress while fetching data
   if (productState.loading)
   {

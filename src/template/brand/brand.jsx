@@ -15,7 +15,10 @@ import brandStyle from "./brand.style";
 import { FetchProducts, FetchFilteredProduct } from "../../redux/actions/productActions";
 import CustomListItems from "./list-items";
 import {
-  brandQueries, genderQueries, yearQueries, priceQueries,
+  brandQueries, 
+  // genderQueries,
+  // yearQueries,
+  // priceQueries,
 } from "./queryData";
 
 const Brand = ({ match }) =>
@@ -72,7 +75,7 @@ const Brand = ({ match }) =>
         return result;
       }, {}),
     );
-    dispatch(FetchProducts(0, 40, params));
+    dispatch(FetchProducts(0, 20, params));
     setTitleBrand(title);
   }, []);
 
@@ -135,7 +138,7 @@ const Brand = ({ match }) =>
               smallPrimary={brandQueries[item]}
             />
           ))}
-          <CustomListItems
+          {/* <CustomListItems
             style={{ textTransform: "uppercase" }}
             selected={query.gender !== undefined ? query.gender : ""}
             queryType="gender"
@@ -156,7 +159,7 @@ const Brand = ({ match }) =>
             updateQuery={updateQuery}
             bigPrimary="Release Years"
             smallPrimary={yearQueries}
-          />
+          /> */}
         </Grid>
         <Grid className={classes.rightSide} item xs={9}>
           <Grid item xs={12} className={classes.sort}>

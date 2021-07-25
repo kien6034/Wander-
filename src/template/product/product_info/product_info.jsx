@@ -41,7 +41,7 @@ const ProductInfo = ({
                   }}
                   txtType="text--bold"
                 >
-                  {name}
+                  {name}{":"}
                   &nbsp;
                 </CustomTypography>
                 <CustomTypography

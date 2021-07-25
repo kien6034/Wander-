@@ -43,16 +43,16 @@ const ProductMedia = ({ imageURL, productName }) =>
 
         <Grid item xs={12} lg={5} md={6}>
           <Grid item xs={12}>
-            <img className={classes.img} src={imageURL[1]} alt={productName} />
+            <img className={classes.img} src={imageURL[0]} alt={productName} />
           </Grid>
 
           <Grid container spacing={2} style={{ marginTop: "4px" }}>
             <Grid item xs={12} lg={6} md={6}>
-              <img className={classes.img} src={imageURL[2]} alt={productName} />
+              <img className={classes.img} src={imageURL[0]} alt={productName} />
             </Grid>
 
             <Grid item xs={12} lg={6} md={6}>
-              <img className={classes.img} src={imageURL[3]} alt={productName} />
+              <img className={classes.img} src={imageURL[0]} alt={productName} />
             </Grid>
           </Grid>
         </Grid>

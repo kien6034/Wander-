@@ -15,7 +15,7 @@ const CustomCard = (props) =>
 {
   const { data, type, ...rest } = props;
   const classes = cardStyle(rest);
-  const urlKey = type === TYPES[0] ? `/product/${data.urlKey}` : `./${data.urlKey}`;
+  const urlKey = type === TYPES[0] ? `/product/${data._id}` : `./${data._id}`;
 
   return (
     <Link to={urlKey} style={{ textDecoration: "none" }}>

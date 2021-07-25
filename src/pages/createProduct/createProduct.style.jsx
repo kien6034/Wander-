@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
 
-const providerStyle = makeStyles(() => ({
+const createProductStyle = makeStyles((theme) => ({
   headerContainer: {
     height: "fit-content",
     backgroundSize: "cover",
@@ -26,6 +26,12 @@ const providerStyle = makeStyles(() => ({
     marginBottom: "8px",
   },
   headerText: { fontSize: "16px", color: "white" },
+  formRoot: {
+      '& .MuiFormControl-root': {
+          width: "80%",
+          margin: theme.spacing(1)
+      }
+  }
 }));
 
-export default providerStyle;
+export default createProductStyle;

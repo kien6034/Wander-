@@ -1,11 +1,10 @@
 import React from "react";
 import { Container, Grid, Paper } from "@material-ui/core";
-import providerStyle from "./createProduct.style";
-import CustomTypography from "../../components/Typography/typography"
-import Rating from '@material-ui/lab/Rating';
+import createProductStyle from "./createProduct.style";
+import CreateProductForm from "./createProductForm";
 
 function Provider() {
-  const classes = providerStyle();
+  const classes = createProductStyle();
   return (
     <React.Fragment key='provider page'>
       <div maxWidth='sm' className={classes.headerContainer}>
@@ -13,9 +12,7 @@ function Provider() {
         <br />
         <br />
         <div className={classes.headerWrap}>
-          <h1 className={classes.headerTitle}>
-            Create Sharing News Now!
-          </h1>
+          <h1 className={classes.headerTitle}>Create Sharing News Now!</h1>
           <br />
           <h1
             style={{
@@ -31,9 +28,11 @@ function Provider() {
       </div>
       <br />
       <Container>
-            
+        <Paper style={{padding: "20px"}}>
+          <CreateProductForm />
+        </Paper>
       </Container>
-      <br/>
+      <br />
     </React.Fragment>
   );
 }

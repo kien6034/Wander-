@@ -7,7 +7,7 @@ import { nanoid } from 'nanoid';
 import Rating from '@material-ui/lab/Rating';
 import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
-import { getOwnOrders } from '../../actions/orderAction';
+import { getOwnProduct } from '../../actions/productAction';
 
 const fakeData = [
     {
@@ -61,12 +61,13 @@ class HomePage extends React.Component{
             imgUrl: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80',
             avatar: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtTQoyY3-n-ZnGbTbbD4xXYY7TeesIDWshXA&usqp=CAU',
             data: fakeData,
-            returnData: ""
+            returnData: []
         }
     }
 
-    componentDidMount() {
-        console.log(getOwnOrders('403940fc8fbf8ec0642f596f8019581b', 'receiver'))
+    async componentDidMount() {
+        const result = await getOwnProduct(this.state.params.pid)
+        this.setState({returnData: result})
     }
 
     render(){
@@ -217,9 +218,7 @@ class HomePage extends React.Component{
                             >
                             Our Foods
                         </CustomTypography>
-                        <CardContainer title="On Sale" showProvider={false}/>
-
-                        <CardContainer title="Hot" showProvider={false}/>
+                        <CardContainer title="" data={this.state.returnData} showProvider={false}/>
                         
                     </div>             
                 </div>

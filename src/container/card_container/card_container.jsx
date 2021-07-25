@@ -77,7 +77,7 @@ const CardContainer = ({
             >
               {title}
             </CustomTypography>
-            {type === TYPES[0] && <HelpIcon style={{ marginLeft: '10px' }} />}
+            {/* {type === TYPES[0] && <HelpIcon style={{ marginLeft: '10px' }} />} */}
           </span>
         <CustomTypography
           txtStyle="text--link"

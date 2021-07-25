@@ -17,7 +17,7 @@ const ProductHeader = ({
   routes,
   donator,
   productName,
-  sizeQuantity,
+  // sizeQuantity,
   quantity,
   urlKey,
 }) => {

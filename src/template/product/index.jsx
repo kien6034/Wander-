@@ -273,7 +273,7 @@ const Product = ({ match }) =>
   }, [tags]);
 
   // Generate data for breadcrumbs
-  const textRoutes = [...tags.slice(0, tags.length - 5)];
+  const textRoutes = [...tags.slice(0, tags.length)];
 
   const linkRoutes = textRoutes.map((text, index) =>
   {
@@ -294,7 +294,6 @@ const Product = ({ match }) =>
     href: `/product/${params.urlKey}`,
     text: productState.productData.productName,
   });
-  console.log(productState)
   // Render Circular Progress while fetching data
   if (productState.loading)
   {

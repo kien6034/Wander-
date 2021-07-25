@@ -117,9 +117,9 @@ function App()
               component={Brand}
               layout={LayoutDefault}
             />
-            <Redirect exact from="/marketplace" to="/marketplace/sneakers" />
+            <Redirect exact from="/marketplace" to="/marketplace/all" />
             <Redirect exact from="/product" to="/marketplace/all" />
-            <Redirect from="*" to="/404" />
+            {/* <Redirect from="*" to="/404" /> */}
           </Switch>
         </BrowserRouter>
       </ThemeProvider>

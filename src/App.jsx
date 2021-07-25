@@ -11,6 +11,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import ChatBox from './pages/new/chatbox/chatbox2';
 import Provider from './pages/provider/provider';
+import CreateProduct from './pages/createProduct/createProduct';
 import LoginRegisterForm from './container/authen/login_register_form';
 import Brand from './template/brand/brand';
 import Product from './template/product';
@@ -56,6 +57,12 @@ function App()
               exact
               path="/about"
               component={About}
+              layout={LayoutDefault}
+            />
+            <AppRoute
+              exact
+              path="/createProduct"
+              component={CreateProduct}
               layout={LayoutDefault}
             />
             <AppRoute

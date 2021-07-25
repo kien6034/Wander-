@@ -60,7 +60,7 @@ const CustomCard = (props) =>
             >
               {data.productName}
             </CustomTypography>
-            <CustomTypography
+            {/* <CustomTypography
               color="rgba(0, 0, 0, 0.5);"
               txtType="text--light"
               txtColor="textSecondary"
@@ -69,7 +69,7 @@ const CustomCard = (props) =>
             >
               {data.numberSold}
               {" Sold"}
-            </CustomTypography>
+            </CustomTypography> */}
             <ProviderThumb height="2.3rem" />
           </CardContent>
         </Card>

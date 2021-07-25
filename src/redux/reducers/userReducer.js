@@ -23,6 +23,7 @@ const initialState = {
   updateSuccessfully: false,
   error: '',
   isOnLoginTab: true,
+  isSend: false
 };
 
 const reducer = (state = initialState, action) =>
@@ -34,6 +35,7 @@ const reducer = (state = initialState, action) =>
         ...state,
         loading: true,
         isOnLoginTab: action.payload,
+        isSend: true,
       };
     case USER_REQUEST_UPDATE:
       return {

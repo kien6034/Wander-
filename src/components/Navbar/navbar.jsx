@@ -24,6 +24,10 @@ const Navbar = (props) =>
       path: '/Marketplace/all',
     },
     {
+      title: 'Create sharing',
+      path: '/createProduct',
+    },
+    {
       title: 'About',
       path: '/about',
     },
@@ -83,7 +87,7 @@ const Navbar = (props) =>
               !isMainPage && classes.marginNone
             }`}
           >
-            Project
+            Wander
             <span
               className={`${(scrolling || !isMainPage) && classes.colorX} ${
                 classes.sizeX

@@ -62,15 +62,16 @@ export const FetchOrderData = (userId, token) => async (dispatch) => {
 
   try {
     const res = await axios.get(`${backEndLink}/api/order/${userId}`, {
-      headers: {
-        Authorization: `Bearer ${token}`,
+      params: {
+        type: "all",
       },
     });
+    console.log(res)
 
     if (res.status === 200) {
       // Pass data to order state only if response array is not empty
-      if (res.data.orders.length) {
-        dispatch(FetchOrdersRequestSuccess(res.data.orders));
+      if (res.data.length) {
+        dispatch(FetchOrdersRequestSuccess(res.data));
       } else {
         dispatch(
           FetchOrdersRequestSuccess([

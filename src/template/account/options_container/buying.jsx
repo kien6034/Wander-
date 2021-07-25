@@ -7,6 +7,7 @@ import { useLocalStorage } from '@rehooks/local-storage';
 import buyingContainerStyle from './buying.style';
 import Shadow from '../../../components/Shadow/shadow';
 import { FetchOrderData } from '../../../redux/actions/orderAction';
+import { getOwnOrders } from '../../../actions/orderAction';
 
 const data = [
   {
@@ -38,14 +39,16 @@ const BuyingContainer = () =>
 
   const userState = useSelector((state) => state.userState);
   const orderState = useSelector((state) => state.orderState);
+  // const [order, setOrder] = useState([])
 
   const [token] = useLocalStorage('token');
   const dispatch = useDispatch();
 
-  useEffect(() =>
+  useEffect( async () =>
   {
-    dispatch(FetchOrderData(userState.userData.id, token));
-  }, [userState.userData.id, token]);
+    dispatch(FetchOrderData(userState.userData._id, token));
+    // setOrder(getOwnOrders(userState.userData._id, ))
+  }, [userState.userData._id, token]);
 
   const columns = [
     {
@@ -96,12 +99,13 @@ const BuyingContainer = () =>
     },
   ];
 
+  console.log(orderState.orderData)
   const rows = orderState.orderData.map((order, index) => ({
     id: index + 1,
     productName: order.productName,
     status: order.status,
-    purchaseDate: order.purchaseDate !== null ? new Date(order.purchaseDate) : null,
-    price: order.price,
+    purchaseDate: order.orderDate !== null ? new Date(order.orderDate) : null,
+    price: order.donate,
   }));
 
   const fkrows= data;

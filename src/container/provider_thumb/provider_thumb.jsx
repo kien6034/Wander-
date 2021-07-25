@@ -17,7 +17,7 @@ const ProviderThumb = (props) =>
   } = props;
 
   const classes = ProviderThumbStyle(rest);
-  const purl = "homepage/" + {p_id};
+  const purl = "homepage/" + p_id;
   
   const toggle_id =title + p_id;
 

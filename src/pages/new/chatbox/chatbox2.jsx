@@ -30,7 +30,6 @@ import { useFirestore, useFirestoreDocData } from "reactfire";
 import moment from "moment";
 import _ from "lodash";
 
-import { getAllOrders } from "../../../actions/orderAction";
 const useStyles = makeStyles({
   table: {
     minWidth: 650,

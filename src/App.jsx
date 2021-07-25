@@ -17,6 +17,7 @@ import Brand from './template/brand/brand';
 import Product from './template/product';
 import Account from './template/account/account';
 import NotFound from './pages/404';
+import HomePage from './pages/home_page/homepage';
 import { GetIdentity } from './redux/actions/userActions';
 import ScrollToTop from './components/ScrollTop/scroll_top';
 import Buy from './template/buy/buy';
@@ -117,6 +118,12 @@ function App()
               component={Brand}
               layout={LayoutDefault}
             />
+            <AppRoute
+              exact
+              path="/homepage/:pid?"
+              component={HomePage}
+              layout={LayoutDefault}
+            />     
             <Redirect exact from="/marketplace" to="/marketplace/all" />
             <Redirect exact from="/product" to="/marketplace/all" />
             {/* <Redirect from="*" to="/404" /> */}

@@ -6,6 +6,7 @@ import CardContainer from '../../container/card_container/card_container';
 import { nanoid } from 'nanoid';
 import Rating from '@material-ui/lab/Rating';
 import Button from '@material-ui/core/Button';
+import { Link } from "react-router-dom";
 
 const fakeData = [
     {
@@ -136,12 +137,22 @@ class HomePage extends React.Component{
                             </div>
                         </div>
                     </div>
+
+                    <div className="chat-with-us">
+                         <Link to='/chatbox/1' style={{ textDecoration: "none", color: 'inherit' }}>
+                            <div className="image">
+                                <img src="https://image.flaticon.com/icons/png/512/980/980191.png" alt="chat" />
+                            </div>
+                        </Link>
+
+                        
+                        <div className="text">
+                            Chat with us
+                        </div>
+                    </div>
                     
                     <div className="about-us">
-                        <div className="image">
-                        <img src={this.state.avatar} alt="avatar" />
-                        </div>
-
+                       
                         <div className="about">
                             <div className="title">
                                 <CustomTypography

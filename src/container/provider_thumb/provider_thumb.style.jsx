@@ -5,12 +5,14 @@ const ProviderThumbStyle = makeStyles(() => ({
     height: (props) => (props.height && props.height),
     display: 'flex',
     justifyContent: 'space-between',
-    margin: '2rem 0 0 0',
-    width: '100%',
+    margin: '5px 10px',
+    marginBottom: '15px',
+    width: 'calc(100% - 20px)',
   },
   left: {
     display: 'flex',
     width: '70%',
+    height: '100%',
   },
   image: {
     borderRadius: '50%',
@@ -35,6 +37,11 @@ const ProviderThumbStyle = makeStyles(() => ({
   right: {
     height: '100%',
     width: '2rem',
+    position: 'relative',
+  },
+  dots: {
+    height: '100%',
+    width: '100%',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -42,12 +49,14 @@ const ProviderThumbStyle = makeStyles(() => ({
     margin: '0 0.5rem',
     backgroundColor: '#dedede',
     borderRadius: '20%',
+    zIndex: '10',
     "&:hover": {
       position: 'relative',
       top: '1px',
       left: '1px',
     },
   },
+
   dot: {
     margin: '0.1rem 0',
     width: '0.25rem',
@@ -55,6 +64,28 @@ const ProviderThumbStyle = makeStyles(() => ({
     backgroundColor: '#666',
     borderRadius: '50%',
   },
+
+  paper: {
+    display: 'none',
+    position: 'absolute',
+    top: '50px',
+    left: '50px',
+    zIndex: '10',
+    minWidth: '150px',
+    backgroundColor: '#fffeee',
+  },
+
+  ppelement: {
+    padding: '5px 10px',
+    "&:hover": {
+      backgroundColor: '#eee',
+    }
+  },
+
 }));
+
+
+
+
 
 export default ProviderThumbStyle;

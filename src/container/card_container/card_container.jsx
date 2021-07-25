@@ -14,6 +14,7 @@ const fakeData = [
     productName: 'Pizza',
     price: 100,
     numberSold: 0,
+    _pid: nanoid(),
     imageurl:
       'https://goido.net/storage/files/pizza-hut-turns-comeback-expert-0.jpg?auto=compress&q=90&dpr=2&updated_at=1611084516&fit=clip&fm=webp&ixlib=react-9.0.3&w=1946',
   },
@@ -22,6 +23,7 @@ const fakeData = [
     productName: 'Product Title',
     price: 100,
     numberSold: 0,
+    _pid: nanoid(),
     imageurl:
       'https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg',
   },
@@ -30,6 +32,7 @@ const fakeData = [
     productName: 'Product Title',
     price: 100,
     numberSold: 0,
+    _pid: nanoid(),
     imageurl:
       'https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg',
   },
@@ -38,6 +41,7 @@ const fakeData = [
     productName: 'Product Title',
     price: 100,
     numberSold: 0,
+    _pid: nanoid(),
     imageurl:
       'https://article.innovadatabase.com/articleimgs/article_images/637393930391956160Quick-breakfast-cereals-676066314_3840x5760.jpeg',
   },
@@ -94,14 +98,14 @@ const CardContainer = ({
         ? data.map((doc) => (
             // eslint-disable-next-line no-underscore-dangle
             <Grid key={doc._id} item xs={6} lg={3} md={6}>
-              <CustomCard data={doc} type={type} showProvider={showProvider} />
+              <CustomCard data={doc} type={type} showProvider={showProvider} title={title} overflow="none"/>
             </Grid>
           ))
 
         // Brand
         : data.map((doc) => (
           <Grid key={doc.id} item xs={4}>
-            <CustomCard data={doc} type={type} />
+            <CustomCard data={doc} type={type} title={title}/>
           </Grid>
         ))}
 

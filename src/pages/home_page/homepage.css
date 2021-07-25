@@ -137,4 +137,33 @@
 .products {
   margin-top: 50px;
 }
+
+.chat-with-us {
+  position: fixed;
+  right: 2%;
+  bottom: 2%;
+  z-index: 100;
+}
+
+.chat-with-us .image {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.chat-with-us .image img {
+  width: 100%;
+}
+
+.chat-with-us .image:hover {
+  position: relative;
+  width: 55px;
+}
+
+.chat-with-us .text {
+  margin-top: 10px;
+  font-size: 1rem;
+}
 /*# sourceMappingURL=homepage.css.map */

@@ -8,6 +8,7 @@ const cardStyle = makeStyles({
     minWidth: (props) => (props.minWidth ? props.minWidth : "none"),
     marginRight: 20,
     position: 'relative',
+    overflow: 'visible',
     "&:hover": {
       position: 'relative',
       top: '-1px',

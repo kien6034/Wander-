@@ -13,14 +13,15 @@ const TYPES = ["product", "brand"];
 
 const CustomCard = (props) =>
 {
-  const { data, type, showProvider, ...rest } = props;
+  const { data, type, showProvider,title, ...rest } = props;
   const classes = cardStyle(rest);
   const urlKey = type === TYPES[0] ? `/product/${data.urlKey}` : `./${data.urlKey}`;
 
   return (
-    <Link to={urlKey} style={{ textDecoration: "none" }}>
-      {type === TYPES[0] ? (
+      <div>
+        {type === TYPES[0] ? (
         <Card {...rest} className={classes.root}>
+          <Link to={urlKey} style={{ textDecoration: "none" }}>
           <CardMedia
             className={classes.media}
             image={data.imageurl}
@@ -56,11 +57,14 @@ const CustomCard = (props) =>
             >
               {data.productName}
             </CustomTypography>
-            {showProvider ? <ProviderThumb /> :<div></div>}
+            
           </CardContent>
+          </Link>
+          {showProvider? <ProviderThumb height="40px" p_id={data._pid} title={title}/> : <div></div>}
         </Card>
       ) : (
         <Card className={classes.root} style={{ position: "relative" }}>
+          <Link to={urlKey} style={{ textDecoration: "none" }}>
           <CardMedia
             className={classes.media}
             image={data.imageurl}
@@ -71,9 +75,10 @@ const CustomCard = (props) =>
             className={classes.smallImg}
             title={data.productName}
           />
+          </Link>
         </Card>
       )}
-    </Link>
+      </div>
   );
 };
 
@@ -88,6 +93,7 @@ CustomCard.propTypes = {
   }),
   type: PropTypes.oneOf(TYPES),
   showProvider: PropTypes.bool,
+  title: PropTypes.string,
 };
 
 CustomCard.defaultProps = {
@@ -101,6 +107,7 @@ CustomCard.defaultProps = {
   },
   type: TYPES[0],
   showProvider: true,
+  title: 'None',
 };
 
 export default CustomCard;

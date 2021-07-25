@@ -95,3 +95,27 @@
 .products{
     margin-top: 50px;
 }
+
+.chat-with-us{
+    position: fixed;
+    right:  2%;
+    bottom: 2%;
+    z-index: 100;
+    .image{
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        transition: 0.2s ease-out;
+        img{
+            width: 100%;
+        }
+    }
+    .image:hover{
+        position: relative;
+        width: 55px;
+    }
+    .text{
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+}

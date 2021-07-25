@@ -327,7 +327,7 @@ export default function createProductForm() {
             }
           />
           <CustomButton
-            // disabled={isLengthEqualZero(values) || !values.approveTerm || isLengthEqualZero(userState) || loading}
+            disabled={isLengthEqualZero(values) || !values.approveTerm || isLengthEqualZero(userState) || loading}
             style={{
               width: '100%',
               marginTop: "5px",

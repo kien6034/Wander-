@@ -18,7 +18,7 @@ const Navbar = (props) =>
 
   const userState = useSelector((state) => state.userState);
 
-  const navLinks = [
+  const navLinks =  userState.isLogin ? [
     {
       title: 'Marketplace',
       path: '/Marketplace/all',
@@ -26,6 +26,27 @@ const Navbar = (props) =>
     {
       title: 'Create sharing',
       path: '/createProduct',
+    },
+    {
+      title: 'About',
+      path: '/about',
+    },
+    {
+      title: 'Our Provider',
+      path: '/provider',
+    },
+    {
+      title: `${!userState.isLogin ? 'Login' : 'Logout'}`,
+      path: `${!userState.isLogin ? '/login' : '/logout'}`,
+    },
+    {
+      title: `${!userState.isLogin ? 'Sign Up' : 'Account'}`,
+      path: `${!userState.isLogin ? '/login' : '/account'}`,
+    },
+  ] : [
+    {
+      title: 'Marketplace',
+      path: '/Marketplace/all',
     },
     {
       title: 'About',

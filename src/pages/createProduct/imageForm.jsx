@@ -49,22 +49,32 @@ const useStyles = makeStyles({
     height: "35%",
     // margin: "8px",
   },
-//   paperRoot: {
-//     maxWidth: 345,
-//   },
+  paperRoot: {
+    width: "80%",
+    margin: "8px"
+  },
 });
 
-function ImageForm() {
+function ImageForm(props) {
+  const {getImage} = props;
   const classes = useStyles();
   const [file, setFile] = useState([]);
-  const [text, setText] = useState("");
+  // const [text, setText] = useState("");
 
   function handleChange(e) {
     for (let i = 0; i < e.target.files.length; i++) {
-        let url = URL.createObjectURL(e.target.files[i]);
-        setFile([...file, url]);
-        console.log(url);
+      let url = URL.createObjectURL(e.target.files[i]);
+      setFile([...file, url]);
+      // console.log(e.target.files[i]);
     }
+    const reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0]);
+    reader.onloadend = () => {
+      getImage(reader.result)
+    };
+    reader.onerror = () => {
+        console.error('can`t read file');
+    };
   }
 
   return (
@@ -78,6 +88,9 @@ function ImageForm() {
         fullWidth
         multiple
         margin='normal'
+        InputProps={{
+          multiple: true
+        }}
         InputLabelProps={{
           shrink: true,
         }}
@@ -90,16 +103,16 @@ function ImageForm() {
             <CardMedia
               component='img'
               alt='Contemplative Reptile'
-              height='140'
-              image={file}
+              height='auto'
+              image={file[0]}
               title='Contemplative Reptile'
             />
           </CardActionArea>
-          <CardContent>
+          {/* <CardContent>
             <Typography gutterBottom variant='h5' component='h2'>
               {text}
             </Typography>
-          </CardContent>
+          </CardContent> */}
         </Card>
       )}
     </React.Fragment>

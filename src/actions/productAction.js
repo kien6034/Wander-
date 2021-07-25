@@ -29,4 +29,24 @@ export const getOwnProduct = async (id) =>
     return res.data;
   }
   throw new Error("Server error", res);
+export const createProduct = async (productData) =>
+{
+  const res = await axios.post(`${backEndLink}/api/product/createProduct`, {
+    productData
+  });
+  try {
+    if (res.status === 200)
+    {
+      return {
+        ...res.data,
+        success: true
+      };
+    } else {
+      return {
+        success: false
+      }
+    }
+  } catch(error) {
+
+  }
 };

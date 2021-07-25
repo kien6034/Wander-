@@ -7,7 +7,10 @@ function Provider() {
   const classes = createProductStyle();
   return (
     <React.Fragment key='provider page'>
-      <div maxWidth='sm' className={classes.headerContainer}>
+      <div 
+        // maxWidth='sm' 
+        className={classes.headerContainer}
+      >
         <br />
         <br />
         <br />

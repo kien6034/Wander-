@@ -43,12 +43,14 @@ const Buy = ({ match }) =>
       toggleLoading(false);
     }, 2000);
     await createOrder(
-      userState.userData.id,
+      productState.productData.donator._id,
+      userState.userData._id,
       productState.productData._id,
       productState.productData.productName,
-      productState.productData.urlKey,
       new Date().toISOString(),
-      productState.productData.price + 10,
+      new Date().toISOString(),
+      1,
+      sizeQuantity,
       "Processing",
     );
     setTimeout(() =>
@@ -70,18 +72,18 @@ const Buy = ({ match }) =>
   useEffect(() =>
   {
     const size = getParameterByName("size");
-    const sizeQuantityValue = productState.productData.sizeQuantity.reduce(
-      (result, cur) =>
-      {
-        if (cur.size === size)
-        {
-          return cur.quantity;
-        }
-        return result;
-      },
-      0,
-    );
-    setSizeQuantity(sizeQuantityValue);
+    // const sizeQuantityValue = productState.productData.sizeQuantity.reduce(
+    //   (result, cur) =>
+    //   {
+    //     if (cur.size === size)
+    //     {
+    //       return cur.quantity;
+    //     }
+    //     return result;
+    //   },
+    //   0,
+    // );
+    setSizeQuantity(size);
   });
 
   const classes = buyStyle();
@@ -144,7 +146,7 @@ const Buy = ({ match }) =>
               onClick={handleOpen}
               style={{ marginLeft: "30px" }}
             >
-              Buy
+              Order
             </CustomButton>
           </Paper>{" "}
         </>

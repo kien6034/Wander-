@@ -29,6 +29,8 @@ import { IBMUserAPI } from "../../../config";
 import { useFirestore, useFirestoreDocData } from "reactfire";
 import moment from "moment";
 import _ from "lodash";
+
+import { getAllOrders } from "../../../actions/orderAction";
 const useStyles = makeStyles({
   table: {
     minWidth: 650,
@@ -120,15 +122,17 @@ const Chat = () => {
   };
   useEffect(() => {
     (async () => {
-      try {
-        let userInfo = await getUserInfo(id);
-        if (!userInfo.data.success) {
-          throw userInfo;
+      if (id && id.length > 0) {
+        try {
+          let userInfo = await getUserInfo(id);
+          if (!userInfo.data.success) {
+            throw userInfo;
+          }
+          setReceiver(userInfo.data);
+        } catch (e) {
+          console.log(e);
+          alert("User not found");
         }
-        setReceiver(userInfo.data);
-      } catch (e) {
-        console.log(e)
-        alert("User not found");
       }
     })();
   }, [id]);

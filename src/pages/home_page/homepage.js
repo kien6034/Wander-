@@ -7,6 +7,7 @@ import { nanoid } from 'nanoid';
 import Rating from '@material-ui/lab/Rating';
 import Button from '@material-ui/core/Button';
 import { Link } from "react-router-dom";
+import { getOwnOrders } from '../../actions/orderAction';
 
 const fakeData = [
     {
@@ -46,8 +47,11 @@ const fakeData = [
 class HomePage extends React.Component{
     constructor(props){
         super(props);
+        const match = props.match
+        const { params } = match;
 
         this.state = {
+            params: params,
             providerName: 'Wander',
             rating: 3,
             total_transaction: 124,
@@ -139,7 +143,7 @@ class HomePage extends React.Component{
                     </div>
 
                     <div className="chat-with-us">
-                         <Link to='/chatbox/1' style={{ textDecoration: "none", color: 'inherit' }}>
+                         <Link to={`/chatbox/${this.state.params.pid}`} style={{ textDecoration: "none", color: 'inherit' }}>
                             <div className="image">
                                 <img src="https://image.flaticon.com/icons/png/512/980/980191.png" alt="chat" />
                             </div>

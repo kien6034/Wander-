@@ -60,7 +60,7 @@ const CustomCard = (props) =>
             
           </CardContent>
           </Link>
-          {showProvider? <ProviderThumb height="40px" p_id={data._pid} title={title} providerName={data.donator ? data.donator.name : "" } rate={Math.round(Math.random() * 5)}/> : <div></div>}
+          {showProvider? <ProviderThumb height="40px" p_id={data._pid} title={title} p_id={data.donator ? data.donator._id : null} providerName={data.donator ? data.donator.name : "" } rate={Math.round(Math.random() * 5)}/> : <div></div>}
         </Card>
       ) : (
         <Card className={classes.root} style={{ position: "relative" }}>

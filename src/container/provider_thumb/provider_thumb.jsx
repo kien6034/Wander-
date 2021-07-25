@@ -17,11 +17,9 @@ const ProviderThumb = (props) =>
   } = props;
 
   const classes = ProviderThumbStyle(rest);
-  const purl = "homepage/" + p_id;
+  const purl = "/homepage/" + p_id;
   
   const toggle_id =title + p_id;
-
-  console.log({p_id})
 
   return (
     <div className={classes.root}>
@@ -49,7 +47,7 @@ const ProviderThumb = (props) =>
         <Paper id = {toggle_id} className={classes.paper}>
         <div className={classes.ppelement}>
           <Link to={purl} style={{ textDecoration: "none", color: 'inherit' }}>
-            View our shop
+            View the shop
           </Link> 
           </div>
           <div className={classes.ppelement}>
